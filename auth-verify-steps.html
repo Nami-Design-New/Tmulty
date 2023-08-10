@@ -1,0 +1,468 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="استكشف أكبر سوق عربي لبيع وشراء الخدمات المصغرة، حيث يمكنك العثور على مجموعة متنوعة من الخدمات الإبداعية والمهارات الفريدة المقدمة من متخصصين موهوبين. احصل على ما تحتاجه بسهولة واعثر على حلول فورية لاحتياجاتك من خلال هذا السوق المثالي للتواصل بين البائعين والمشترين.">
+    <title>Tmulti</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.svg">
+    <!-- icons -->
+    <link rel="stylesheet" href="assets/css/tabler-icons.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!-- swiper- Ccpicker -->
+    <link rel="stylesheet" href="assets/css/swiper.css">
+    <link rel="stylesheet" href="assets/css/jquery.ccpicker.css">
+    <link rel="stylesheet" href="assets/css/countrySelect.css">
+    <!-- Css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <nav class="tnavbar">
+            <div class="right-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <img class="brand" src="assets/images/logo.svg" alt="logo">
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li class="nav-link">
+                        <a href="#">+ اضف خدمه</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="left-wrapper">
+                <ul class="loged-in-minor-menu">
+                    <li class="link">
+                        <button class="btn  dropdown-toggle" type="button" id="searchmenu" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="ti ti-md ti-search"></i>
+                        </button>
+                        <form class="dropdown-menu searchmenu" aria-labelledby="searchmenu">
+                            <input type="text" placeholder="ابحث عن...">
+                        </form>
+                    </li>
+                    <li class="link">
+                        <button class="btn  dropdown-toggle" type="button" id="langmenu" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class='ti ti-language rounded-circle ti-md'></i>
+                        </button>
+                        <ul class="dropdown-menu languagemenu" aria-labelledby="langmenu">
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <div class="circle-filled"></div>
+                                    عربى
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <div class="circle-outline"></div>
+                                    English
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="link">
+                        <button class="btn  dropdown-toggle" type="button" id="thememenu" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="ti ti-md ti-sun"></i>
+                        </button>
+                        <ul class="dropdown-menu thememenu" aria-labelledby="thememenu">
+                            <li>
+                                <a class="dropdown-item" id="lightTheme" href="javascript: void(0)">
+                                    <i class="ti ti-md ti-sun"></i> فاتح
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" id="darkTheme" href="javascript: void(0)">
+                                    <i class="ti ti-md ti-moon"></i> داكن
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="link">
+                        <a href="#" class="cart">
+                            <i class="fa-light fa-cart-shopping"></i>
+                        </a>
+                    </li>
+                    <li class="link">
+                        <button class="btn  dropdown-toggle" type="button" id="notifimenu" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-regular fa-message-lines"></i>
+                        </button>
+                        <ul class="dropdown-menu notifimenu" aria-labelledby="notifimenu">
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <div class="image-wrap">
+                                        <img src="assets/images/av1.png" alt="user">
+                                    </div>
+                                    <div class="text-wrap">
+                                        <div class="d-flex justify-content-between">
+                                            <h6>خالد عوض</h6>
+                                            <span class="time">20 / 10 / 2023</span>
+                                        </div>
+                                        <p>انشاء متجر الكتروني احترافي على منصة ووردبريس ووكومرس</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h5 class="me">150 دولار ان شاء الله</h5>
+                                            <span class="message-number">
+                                                2
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <div class="image-wrap">
+                                        <img src="assets/images/av2.png" alt="user">
+                                    </div>
+                                    <div class="text-wrap">
+                                        <div class="d-flex justify-content-between">
+                                            <h6>خالد عوض</h6>
+                                            <span class="time">18 / 10 / 2023</span>
+                                        </div>
+                                        <p>نظام الكتروني لعيادة طبية</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h5>وعليكم السلام ورحمة الله وبركاته</h5>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <div class="showall">
+                                <a href="#">جميع الإشعارات</a>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="link">
+                        <button class="btn dropdown-toggle" type="button" id="usermenu" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <img src="assets/images/avatar.png" alt="user-avatar">
+                        </button>
+                        <ul class="dropdown-menu usermenu" aria-labelledby="usermenu">
+                            <li>
+                                <a class="dropdown-item" href="profile.html">
+                                    <i class="fa-solid fa-user"></i>
+                                    محمد العشرى
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fa-sharp fa-solid fa-heart"></i>
+                                    الخدمات المفضلة
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fa-sharp fa-solid fa-dollar-sign"></i>
+                                    الرصيد
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fa-solid fa-sliders"></i>
+                                    الإعدادات
+                                </a>
+                            </li>
+                            <div class="line"></div>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fa-sharp fa-solid fa-pen-to-square"></i>
+                                    تعديل الحساب
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                    المساعده
+                                </a>
+                            </li>
+                            <div class="line"></div>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fa-solid fa-right-from-bracket"></i>
+                                    تسجيل الخروج
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="login-section container">
+            <h1 class="text-center">توثيق الحساب</h1>
+            <p class="text-center mt-3 title">مرحبا بك …! ادخل جميع البيانات المطلوبة لإتمام عمليه توثيق الحساب.</p>
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-11 col-sm-9 col-md-7 col-lg-7  text-center p-0 mb-2">
+                        <div>
+                            <form id="msform">
+                                <!-- progressbar -->
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                        role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                                    </div>
+                                </div>
+                                <br>
+                                <!-- wizard step -->
+                                <fieldset>
+                                    <div class="form-card">
+                                        <div class="input-field">
+                                            <label for="phone">
+                                                <i class="ti ti-md ti-device-mobile"></i> رقم الهاتف
+                                            </label>
+                                            <div class="inputs">
+                                                <input type="tel" id="phone" name="phone" placeholder="0XXXXXXXXXX">
+                                                <input type="text" id="phoneField1" name="countryPicker"
+                                                    class="country-picker">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="button" name="next" class="next action-button" value="التالي" />
+                                </fieldset>
+                                <!-- wizard step -->
+                                <fieldset>
+                                    <div class="form-card">
+                                        <h6 class="text-center">من فضلك ادخل الرمز المرسل الي الرقم</h6>
+                                        <p class="text-center mt-2"> +9710123456789 </p>
+                                        <div class="input-field">
+                                            <div class="otp-container">
+                                                <input class="otp-input" type="text" maxlength="1" inputmode="numeric"
+                                                    pattern="[0-9]" required>
+                                                <input class="otp-input" type="text" maxlength="1" inputmode="numeric"
+                                                    pattern="[0-9]" required>
+                                                <input class="otp-input" type="text" maxlength="1" inputmode="numeric"
+                                                    pattern="[0-9]" required>
+                                                <input class="otp-input" type="text" maxlength="1" inputmode="numeric"
+                                                    pattern="[0-9]" required>
+                                                <input class="otp-input" type="text" maxlength="1" inputmode="numeric"
+                                                    pattern="[0-9]" required>
+                                            </div>
+                                        </div>
+                                        <div class="resend-code">
+                                            <a href="#!">اعادة ارسال الرمز</a>
+                                            <div class="timer">
+                                                <span>48</span> :
+                                                <span>00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="button" name="next" class="next action-button" value="التالي" />
+                                    <input type="button" name="previous" class="previous action-button-previous"
+                                        value="السابق" />
+                                </fieldset>
+                                <!-- wizard step -->
+                                <fieldset>
+                                    <div class="form-card">
+                                        <div class="advice">
+                                            <div class="icon">
+                                                <img src="assets/images/id.svg" alt="icon">
+                                            </div>
+                                            <h6>يرجى ارفاق بطاقة الهوية الوطنية والتأكد من أنها:</h6>
+                                            <ul>
+                                                <li><i class="fa-solid fa-check"></i> مضيئة بشكل جيد وواضحة للقراءة</li>
+                                                <li><i class="fa-solid fa-check"></i> موضوعة داخل الإطار وغير مقصوصة
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="input-field">
+                                            <label>
+                                                <i class="fa-solid fa-id-card"></i> صورة الجهة الأمامية للهوية الوطنية
+                                            </label>
+                                            <label class="img-upload">
+                                                <img src="assets/images/fileup1.svg" alt="icon">
+                                                <input name="front-id-img" id="img-upload-front" accept="image/*"
+                                                    type="file">
+                                            </label>
+                                        </div>
+                                        <div class="input-field">
+                                            <label>
+                                                <i class="fa-solid fa-id-card"></i> صورة الجهة الخلفية للهوية الوطنية
+                                            </label>
+                                            <label class="img-upload">
+                                                <img src="assets/images/fileup1.svg" alt="icon">
+                                                <input name="back-id-img" id="img-upload-back" accept="image/*"
+                                                    type="file">
+                                            </label>
+                                        </div>
+                                        <div class="input-field">
+                                            <label>
+                                                <i class="fa-solid fa-id-card-clip"></i> صورتك مع الهوية الوطنية
+                                            </label>
+                                            <label class="img-upload">
+                                                <img src="assets/images/fileup1.svg" alt="icon">
+                                                <input name="front-id-img" id="img-upload-id-with-user" accept="image/*"
+                                                    type="file">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <input type="button" name="next" class="next action-button" value="التالي" />
+                                    <input type="button" name="previous" class="previous action-button-previous"
+                                        value="السابق" />
+                                </fieldset>
+                                <fieldset>
+                                    <div class="form-card">
+                                        <div class="input-field">
+                                            <label for="name">
+                                                <i class="ti ti-md ti-user"></i> الاسم كما هو في الهوية
+                                            </label>
+                                            <input type="text" id="name" name="name"
+                                                placeholder="مثال : محمد خالد محمود">
+                                        </div>
+                                        <div class="input-field">
+                                            <label for="country">
+                                                <i class="ti ti-md ti-flag"></i> الدولة
+                                            </label>
+                                            <input type="text" id="country" name="country">
+                                        </div>
+                                        <div class="input-field">
+                                            <label for="birth">
+                                                <i class="fa-solid fa-calendar"></i> تاريخ الميلاد
+                                            </label>
+                                            <input type="date" id="birth" name="birth" placeholder="15 / 06 / 2023">
+                                        </div>
+                                        <div class="input-field">
+                                            <label for="gender">
+                                                <i class="fa-solid fa-venus-mars"></i> النوع
+                                            </label>
+                                            <div class="inputs">
+                                                <label for="male">
+                                                    <div class="gender">
+                                                        <img src="assets/images/male.svg" alt="male">
+                                                        ذكر
+                                                    </div>
+                                                    <input type="radio" name="gender" id="male">
+                                                </label>
+                                                <label for="female">
+                                                    <div class="gender">
+                                                        <img src="assets/images/female.svg" alt="female">
+                                                        انثى
+                                                    </div>
+                                                    <input type="radio" name="gender" id="female">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="button" name="previous" class="previous action-button-previous"
+                                        value="السابق" />
+                                    <input type="button" name="next" class="next action-button" value="تأكيد و انهاء" />
+                                </fieldset>
+                                <!-- wizard finish step -->
+                                <fieldset>
+                                    <div class="form-card">
+                                        <div class="row justify-content-center">
+                                            <div class="col-12">
+                                                <img src="assets/images/success.svg" class="fit-image">
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <div class="col-10 text-center">
+                                                <h5 class="purple-text text-center">تم ارسال بياناتك بنجاح وجاري
+                                                    مراجعتها حالياً , سيتم اخطارك علي البريد الالكتروني المسجل لدينا
+                                                </h5>
+                                                <a href="index.html">الرئيسية <i class="fa-solid fa-angle-left"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/jquery.ccpicker.min.js"></script>
+    <script src="assets/js/countrySelect.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var current_fs, next_fs, previous_fs; //fieldsets
+            var opacity;
+            var current = 1;
+            var steps = $("fieldset").length;
+            setProgressBar(current);
+            $(".next").click(function () {
+                current_fs = $(this).parent();
+                next_fs = $(this).parent().next();
+                next_fs.show();
+                current_fs.animate({ opacity: 0 }, {
+                    step: function (now) {
+                        opacity = 1 - now;
+                        current_fs.css({
+                            'display': 'none',
+                            'position': 'relative'
+                        });
+                        next_fs.css({ 'opacity': opacity });
+                    },
+                    duration: 500
+                });
+                setProgressBar(++current);
+            });
+            $(".previous").click(function () {
+                current_fs = $(this).parent();
+                previous_fs = $(this).parent().prev();
+                $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+                previous_fs.show();
+                current_fs.animate({ opacity: 0 }, {
+                    step: function (now) {
+                        opacity = 1 - now;
+                        current_fs.css({
+                            'display': 'none',
+                            'position': 'relative'
+                        });
+                        previous_fs.css({ 'opacity': opacity });
+                    },
+                    duration: 500
+                });
+                setProgressBar(--current);
+            });
+            function setProgressBar(curStep) {
+                var percent = parseFloat(100 / steps) * curStep;
+                percent = percent.toFixed();
+                $(".progress-bar")
+                    .css("width", percent + "%")
+            }
+            $(".submit").click(function () {
+                return false;
+            })
+        });
+    </script>
+    <script>
+        // country code picker
+        $(document).ready(function () {
+            $("#phoneField1").CcPicker();
+            $("#phoneField1").CcPicker("setCountryByCode", "ae");
+        });
+        // country picker
+        $("#country").countrySelect({
+            defaultCountry: "ae",
+            preferredCountries: ['ae', 'dz', 'eg', 'jo', 'sa'],
+        });
+        // otp inputs
+        const otpInputs = document.querySelectorAll('.otp-input');
+        otpInputs.forEach((input, index) => {
+            input.addEventListener('input', (event) => {
+                const currentInput = event.target;
+                const nextInput = otpInputs[index + 1];
+                if (currentInput.value && nextInput) {
+                    nextInput.focus();
+                }
+            });
+            input.addEventListener('keydown', (event) => {
+                if (event.key === 'Backspace' && index > 0) {
+                    otpInputs[index - 1].focus();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

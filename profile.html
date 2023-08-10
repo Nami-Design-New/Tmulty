@@ -1,0 +1,569 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="استكشف أكبر سوق عربي لبيع وشراء الخدمات المصغرة، حيث يمكنك العثور على مجموعة متنوعة من الخدمات الإبداعية والمهارات الفريدة المقدمة من متخصصين موهوبين. احصل على ما تحتاجه بسهولة واعثر على حلول فورية لاحتياجاتك من خلال هذا السوق المثالي للتواصل بين البائعين والمشترين.">
+    <title>Tmulti</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.svg">
+    <!-- icons -->
+    <link rel="stylesheet" href="assets/css/tabler-icons.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- Css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <nav class="tnavbar">
+            <div class="right-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <img class="brand" src="assets/images/logo.svg" alt="logo">
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li class="nav-link">
+                        <a href="#">+ اضف خدمه</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="left-wrapper">
+                <ul class="loged-in-minor-menu">
+                    <li class="link">
+                        <button class="btn  dropdown-toggle" type="button" id="searchmenu" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="ti ti-md ti-search"></i>
+                        </button>
+                        <form class="dropdown-menu searchmenu" aria-labelledby="searchmenu">
+                            <input type="text" placeholder="ابحث عن...">
+                        </form>
+                    </li>
+                    <li class="link">
+                        <button class="btn  dropdown-toggle" type="button" id="langmenu" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class='ti ti-language rounded-circle ti-md'></i>
+                        </button>
+                        <ul class="dropdown-menu languagemenu" aria-labelledby="langmenu">
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <div class="circle-filled"></div>
+                                    عربى
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <div class="circle-outline"></div>
+                                    English
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="link">
+                        <button class="btn  dropdown-toggle" type="button" id="thememenu" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="ti ti-md ti-sun"></i>
+                        </button>
+                        <ul class="dropdown-menu thememenu" aria-labelledby="thememenu">
+                            <li>
+                                <a class="dropdown-item" id="lightTheme" href="javascript: void(0)">
+                                    <i class="ti ti-md ti-sun"></i> فاتح
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" id="darkTheme" href="javascript: void(0)">
+                                    <i class="ti ti-md ti-moon"></i> داكن
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="link">
+                        <a href="#" class="cart">
+                            <i class="fa-light fa-cart-shopping"></i>
+                        </a>
+                    </li>
+                    <li class="link">
+                        <button class="btn  dropdown-toggle" type="button" id="notifimenu" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-regular fa-message-lines"></i>
+                        </button>
+                        <ul class="dropdown-menu notifimenu" aria-labelledby="notifimenu">
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <div class="image-wrap">
+                                        <img src="assets/images/av1.png" alt="user">
+                                    </div>
+                                    <div class="text-wrap">
+                                        <div class="d-flex justify-content-between">
+                                            <h6>خالد عوض</h6>
+                                            <span class="time">20 / 10 / 2023</span>
+                                        </div>
+                                        <p>انشاء متجر الكتروني احترافي على منصة ووردبريس ووكومرس</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h5 class="me">150 دولار ان شاء الله</h5>
+                                            <span class="message-number">
+                                                2
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <div class="image-wrap">
+                                        <img src="assets/images/av2.png" alt="user">
+                                    </div>
+                                    <div class="text-wrap">
+                                        <div class="d-flex justify-content-between">
+                                            <h6>خالد عوض</h6>
+                                            <span class="time">18 / 10 / 2023</span>
+                                        </div>
+                                        <p>نظام الكتروني لعيادة طبية</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h5>وعليكم السلام ورحمة الله وبركاته</h5>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <div class="showall">
+                                <a href="#">جميع الإشعارات</a>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="link">
+                        <button class="btn dropdown-toggle" type="button" id="usermenu" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <img src="assets/images/avatar.png" alt="user-avatar">
+                        </button>
+                        <ul class="dropdown-menu usermenu" aria-labelledby="usermenu">
+                            <li>
+                                <a class="dropdown-item" href="profile.html">
+                                    <i class="fa-solid fa-user"></i>
+                                    محمد العشرى
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fa-sharp fa-solid fa-heart"></i>
+                                    الخدمات المفضلة
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fa-sharp fa-solid fa-dollar-sign"></i>
+                                    الرصيد
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fa-solid fa-sliders"></i>
+                                    الإعدادات
+                                </a>
+                            </li>
+                            <div class="line"></div>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fa-sharp fa-solid fa-pen-to-square"></i>
+                                    تعديل الحساب
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                    المساعده
+                                </a>
+                            </li>
+                            <div class="line"></div>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fa-solid fa-right-from-bracket"></i>
+                                    تسجيل الخروج
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="profile-section container">
+            <div class="row">
+                <div class="profile-descripe col-lg-5 col-12">
+                    <div class="banner">
+                        <div class="user-avatar">
+                            <a href="assets/images/avatar.png" data-fancybox="user-avatar">
+                                <img src="assets/images/avatar.png" alt="user-avatar">
+                            </a>
+                            <span class="status"></span>
+                        </div>
+                    </div>
+                    <div class="name-rate">
+                        <h6>خالد عوض</h6>
+                        <span><i class="ti ti-md ti-briefcase"></i> بائع مميز</span>
+                        <div class="rate">
+                            <ul>
+                                <li class="star"><i class="fa-solid fa-star"></i></li>
+                                <li class="star"><i class="fa-solid fa-star"></i></li>
+                                <li class="star"><i class="fa-solid fa-star"></i></li>
+                                <li class="star"><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="cash">
+                        <div class="head">
+                            <h4><i class="ti ti-md ti-info-circle"></i> الرصيد</h4>
+                            <a href="#!">سحب</a>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-4 p-0">
+                                <div class="cash-info">
+                                    <span>الرصيد الكلي</span>
+                                    <h6>100.00 <i class="fa-solid fa-dollar-sign"></i></h6>
+                                </div>
+                            </div>
+                            <div class="col-4 p-0">
+                                <div class="cash-info">
+                                    <span> رصيد معلّق </span>
+                                    <h6>0.00 <i class="fa-solid fa-dollar-sign"></i></h6>
+                                </div>
+                            </div>
+                            <div class="col-4 p-0">
+                                <div class="cash-info">
+                                    <span> أرباح يمكن سحبها </span>
+                                    <h6>89.00 <i class="fa-solid fa-dollar-sign"></i></h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-taps col-lg-7 col-12 pe-lg-5 ps-lg-5 pe-0 ps-0">
+                    <!-- Tablist -->
+                    <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                        <!-- tab -->
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="pills-about-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-about" type="button" role="tab" aria-controls="pills-about"
+                                aria-selected="true">نبذة عني</button>
+                        </li>
+                        <!-- tab -->
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-services-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-services" type="button" role="tab" aria-controls="pills-services"
+                                aria-selected="false">الخدمات</button>
+                        </li>
+                        <!-- tab -->
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-rating-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-rating" type="button" role="tab" aria-controls="pills-rating"
+                                aria-selected="false">التقييمات</button>
+                        </li>
+                        <!-- tab -->
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-verification-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-verification" type="button" role="tab"
+                                aria-controls="pills-verification" aria-selected="false">توثيقات</button>
+                        </li>
+                        <!-- tab -->
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-statics-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-statics" type="button" role="tab" aria-controls="pills-statics"
+                                aria-selected="false">احصائيات</button>
+                        </li>
+                    </ul>
+                    <!-- Tabs content -->
+                    <div class="tab-content" id="pills-tabContent">
+                        <!-- about tab content -->
+                        <div class="tab-pane fade show active" id="pills-about" role="tabpanel"
+                            aria-labelledby="pills-about-tab">
+                            <p>
+                                انا خالد عوض مبرمج مواقع بخبرة تفوق الاربع سنوات عملت على كثير من المشاريع وقمت بتنفيذ
+                                عدت مواقع لشركات محلية ودولية. =================مميزات العمل معي=================
+                                <br>
+                            <ul>
+                                <li>-توفير خدمة ممتازة وبحودة عالية في وقت قياسي.</li>
+                                <li>-توفير خدمة الدعم بعد البيع واستلام مشروعك في حالة ظهور اي شئ.</li>
+                                <li>-خبرة جيدة في مجال البرمجة ويمكنني فهم اي خدمات تريدها في مشروعك .</li>
+                                <li>-تخصصي ((computer science and artificial intellience)).</li>
+                                <li>-سرعة الرد على الرسائل.</li>
+                                <li>-هدفي الاول هو ارضائك كعميل.</li>
+                            </ul>
+                            </p>
+                        </div>
+                        <!-- services tab content -->
+                        <div class="tab-pane fade" id="pills-services" role="tabpanel"
+                            aria-labelledby="pills-services-tab">
+                            <div class="services-contianer">
+                                <a href="add-sevice.html" class="add-service">
+                                    <i class="ti ti-md ti-circle-plus"></i> اضف خدمة
+                                </a>
+                                <div class="container mt-4">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-12 p-2">
+                                            <div class="service-card">
+                                                <a href="service.html" class="img">
+                                                    <img src="assets/images/bann.jpg" alt="">
+                                                </a>
+                                                <div class="content">
+                                                    <h6>اصنع لك تطبيق متجر الكتروني باستخدام flutter...</h6>
+                                                    <p><a href="#!">برمجة وتطوير</a> / <span>إنشاء تطبيق</span></p>
+                                                    <div class="d-flex gap-3">
+                                                        <div class="rate">
+                                                            <ul>
+                                                                <li class="star"><i class="fa-solid fa-star"></i></li>
+                                                                <li class="star"><i class="fa-solid fa-star"></i></li>
+                                                                <li class="star"><i class="fa-solid fa-star"></i></li>
+                                                                <li class="star"><i class="fa-solid fa-star"></i></li>
+                                                                <li><i class="fa-solid fa-star"></i></li>
+                                                            </ul>
+                                                        </div>
+                                                        <span class="sell-count">( 4 )</span>
+                                                    </div>
+                                                    <h6 class="start-from">تبدأ من : <b>10.00$</b></h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- rating tab content -->
+                        <div class="tab-pane fade" id="pills-rating" role="tabpanel" aria-labelledby="pills-rating-tab">
+                            <div class="rate-card">
+                                <div class="rate-owner">
+                                    <div class="rate-head d-flex">
+                                        <div class="img">
+                                            <img src="assets/images/rate-owner1.jpg" alt="rater">
+                                        </div>
+                                        <div class="name-time">
+                                            <h5>احمد محسن</h5>
+                                            <span>منذ 9 أيام و18 ساعة</span>
+                                        </div>
+                                    </div>
+                                    <p class="rate-text">انصح به وبقوة لن تجدون مثل خدمته وابداعه واخلاقه قد يفوتكم
+                                        عمركم اذا لم تتعملو
+                                        معه لانه جدا بعد خدمته تقولون فعلا يستحق التتعامل معه</p>
+                                    <div class="rating-cards container">
+                                        <div class="row">
+                                            <div class="col-4 p-2">
+                                                <div class="r-card ">
+                                                    <h6>التسليم بالموعد</h6>
+                                                    <div class="rate">
+                                                        <ul>
+                                                            <li class="star"><i class="fa-solid fa-star"></i></li>
+                                                            <li class="star"><i class="fa-solid fa-star"></i></li>
+                                                            <li class="star"><i class="fa-solid fa-star"></i></li>
+                                                            <li class="star"><i class="fa-solid fa-star"></i></li>
+                                                            <li><i class="fa-solid fa-star"></i></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 p-2">
+                                                <div class="r-card ">
+                                                    <h6>التواصل والمتابعة</h6>
+                                                    <div class="rate">
+                                                        <ul>
+                                                            <li class="star"><i class="fa-solid fa-star"></i></li>
+                                                            <li class="star"><i class="fa-solid fa-star"></i></li>
+                                                            <li class="star"><i class="fa-solid fa-star"></i></li>
+                                                            <li class="star"><i class="fa-solid fa-star"></i></li>
+                                                            <li class="star"><i class="fa-solid fa-star"></i></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 p-2">
+                                                <div class="r-card ">
+                                                    <h6>جودة الخدمة</h6>
+                                                    <div class="rate">
+                                                        <ul>
+                                                            <li class="star"><i class="fa-solid fa-star"></i></li>
+                                                            <li class="star"><i class="fa-solid fa-star"></i></li>
+                                                            <li class="star"><i class="fa-solid fa-star"></i></li>
+                                                            <li><i class="fa-solid fa-star"></i></li>
+                                                            <li><i class="fa-solid fa-star"></i></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rate-card">
+                                <div class="rate-owner">
+                                    <div class="rate-head d-flex">
+                                        <div class="img">
+                                            <img src="assets/images/rate-owner3.jpg" alt="rater">
+                                        </div>
+                                        <div class="name-time">
+                                            <h5>خالد عوض</h5>
+                                            <span>منذ 10 أيام و19 ساعة</span>
+                                        </div>
+                                    </div>
+                                    <p class="rate-text">رقي في التعامل ومتعاون جدا وانصح الجميع بالتعامل معه</p>
+                                    <div class="rating-cards container">
+                                        <div class="row">
+                                            <div class="col-4 p-2">
+                                                <div class="r-card ">
+                                                    <h6>التسليم بالموعد</h6>
+                                                    <div class="rate">
+                                                        <ul>
+                                                            <li class="star"><i class="fa-solid fa-star"></i></li>
+                                                            <li class="star"><i class="fa-solid fa-star"></i></li>
+                                                            <li class="star"><i class="fa-solid fa-star"></i></li>
+                                                            <li class="star"><i class="fa-solid fa-star"></i></li>
+                                                            <li><i class="fa-solid fa-star"></i></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 p-2">
+                                                <div class="r-card ">
+                                                    <h6>التواصل والمتابعة</h6>
+                                                    <div class="rate">
+                                                        <ul>
+                                                            <li class="star"><i class="fa-solid fa-star"></i></li>
+                                                            <li class="star"><i class="fa-solid fa-star"></i></li>
+                                                            <li class="star"><i class="fa-solid fa-star"></i></li>
+                                                            <li class="star"><i class="fa-solid fa-star"></i></li>
+                                                            <li class="star"><i class="fa-solid fa-star"></i></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 p-2">
+                                                <div class="r-card ">
+                                                    <h6>جودة الخدمة</h6>
+                                                    <div class="rate">
+                                                        <ul>
+                                                            <li class="star"><i class="fa-solid fa-star"></i></li>
+                                                            <li class="star"><i class="fa-solid fa-star"></i></li>
+                                                            <li class="star"><i class="fa-solid fa-star"></i></li>
+                                                            <li><i class="fa-solid fa-star"></i></li>
+                                                            <li><i class="fa-solid fa-star"></i></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rate-card">
+                                <div class="rate-owner">
+                                    <div class="rate-head d-flex">
+                                        <div class="img">
+                                            <img src="assets/images/rate-owner2.jpg" alt="rater">
+                                        </div>
+                                        <div class="name-time">
+                                            <h5>يوسف الشربيني</h5>
+                                            <span>منذ 17 يوم و15 ساعة</span>
+                                        </div>
+                                    </div>
+                                    <p class="rate-text">تجربة جدا رائعة مع الاخ رشيد محترف جدا في التصميم وتم التسليم
+                                        بالموعد بالاضافة لكونه شخص راقي جدا بالتعامل سررت بمعرفتك وجزاك الله كل خير
+                                        وبالتأكيد لن يكون اخر تعامل شكرا،شكرا اخي رشيد</p>
+                                    <div class="rating-cards container">
+                                        <div class="row">
+                                            <div class="col-4 p-2">
+                                                <div class="r-card ">
+                                                    <h6>التسليم بالموعد</h6>
+                                                    <div class="rate">
+                                                        <ul>
+                                                            <li class="star"><i class="fa-solid fa-star"></i></li>
+                                                            <li class="star"><i class="fa-solid fa-star"></i></li>
+                                                            <li class="star"><i class="fa-solid fa-star"></i></li>
+                                                            <li class="star"><i class="fa-solid fa-star"></i></li>
+                                                            <li><i class="fa-solid fa-star"></i></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 p-2">
+                                                <div class="r-card ">
+                                                    <h6>التواصل والمتابعة</h6>
+                                                    <div class="rate">
+                                                        <ul>
+                                                            <li class="star"><i class="fa-solid fa-star"></i></li>
+                                                            <li class="star"><i class="fa-solid fa-star"></i></li>
+                                                            <li class="star"><i class="fa-solid fa-star"></i></li>
+                                                            <li class="star"><i class="fa-solid fa-star"></i></li>
+                                                            <li class="star"><i class="fa-solid fa-star"></i></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 p-2">
+                                                <div class="r-card ">
+                                                    <h6>جودة الخدمة</h6>
+                                                    <div class="rate">
+                                                        <ul>
+                                                            <li class="star"><i class="fa-solid fa-star"></i></li>
+                                                            <li class="star"><i class="fa-solid fa-star"></i></li>
+                                                            <li class="star"><i class="fa-solid fa-star"></i></li>
+                                                            <li><i class="fa-solid fa-star"></i></li>
+                                                            <li><i class="fa-solid fa-star"></i></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- verification tab content -->
+                        <div class="tab-pane fade" id="pills-verification" role="tabpanel"
+                            aria-labelledby="pills-verification-tab">
+                            <ul class="verify-list">
+                                <li class="d-flex gap-2">
+                                    <span><i class="ti ti-md ti-discount-check-filled"></i></span> الهوية الشخصية
+                                </li>
+                                <li class="d-flex gap-2">
+                                    <span><i class="ti ti-md ti-discount-check-filled"></i></span> رقم الجوال
+                                </li>
+                                <li class="d-flex gap-2">
+                                    <span><i class="ti ti-md ti-discount-check-filled"></i></span> البريد الإلكتروني
+                                </li>
+                            </ul>
+                            <div class="unverified-box">
+                                <h6>الحساب غير موثق</h6>
+                                <a href="auth-verify-steps.html">توثيق الحساب</a>
+                            </div>
+                        </div>
+                        <!-- statics tab content -->
+                        <div class="tab-pane fade" id="pills-statics" role="tabpanel"
+                            aria-labelledby="pills-statics-tab">
+                            <ul class="statics-list">
+                                <li class="d-flex justify-content-between">
+                                    <h6>متوسط سرعة الرد</h6>
+                                    <span>60 <small>د</small></span>
+                                </li>
+                                <li class="d-flex justify-content-between">
+                                    <h6>الخدمات المنشورة</h6>
+                                    <span>4</span>
+                                </li>
+                                <li class="d-flex justify-content-between">
+                                    <h6>عدد العملاء</h6>
+                                    <span>65</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

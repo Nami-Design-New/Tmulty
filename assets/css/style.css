@@ -1,0 +1,1650 @@
+@import 'https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@300;400;500;600;700&display=swap';
+:target {
+  scroll-margin-top: 100px;
+}
+
+.fancybox__container {
+  z-index: 1999;
+}
+
+.fancybox__track,
+.fancybox__content,
+.carousel__track {
+  direction: ltr !important;
+}
+
+:root {
+  --white-color: #fff;
+  --main-color: #ba2649;
+  --main30-color: #f5ccd6;
+  --light-bg: #fafafa;
+  --gray-background: #f4f4f4;
+  --black-color: #231f20;
+  --text-color: #777777;
+  --LightGray: #d9d9d9;
+  --star-color: #ffd500;
+  --input-bg: #fafafa;
+  --input-hint: #aaaaaa;
+  --id-confirm: #eef6fc;
+  --main-transation: all .5s ease-in-out;
+}
+
+.dark-theme {
+  transition: var(--main-transation);
+  --white-color: #0d0d0d;
+  --main-color: #cf2a51;
+  --main30-color: #480e1d;
+  --gray-background: #171717;
+  --black-color: #fff;
+  --text-color: #777777;
+  --input-bg: #171717;
+  --LightGray: #171717;
+  --id-confirm: #171717;
+  --light-bg: #171717;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--white-color-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+  height: 300px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  line-height: 28px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+  font-family: "Noto Kufi Arabic", sans-serif;
+}
+
+body {
+  background: var(--white-color);
+  overflow-x: hidden;
+  position: relative;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.fancybox__container {
+  z-index: 999999999999;
+}
+
+.fancybox__track,
+.fancybox__content,
+.carousel__track {
+  direction: ltr !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  padding: 0;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  height: 80px;
+  width: 100%;
+  background: var(--gray-background);
+  z-index: 9999;
+}
+header .tnavbar {
+  height: 80px;
+  width: 100%;
+  padding: 10px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .tnavbar .right-wrapper,
+header .tnavbar .left-wrapper {
+  display: flex;
+  gap: 32px;
+}
+header .tnavbar .right-wrapper .nav-links,
+header .tnavbar .left-wrapper .nav-links {
+  height: 100%;
+}
+header .tnavbar .right-wrapper .nav-links .nav-link,
+header .tnavbar .left-wrapper .nav-links .nav-link {
+  height: 60px;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--black-color);
+}
+header .tnavbar .right-wrapper .nav-links .nav-link a,
+header .tnavbar .left-wrapper .nav-links .nav-link a {
+  color: var(--black-color);
+}
+header .tnavbar .logo {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .tnavbar .logo img {
+  max-height: 50px;
+}
+header .tnavbar .loged-in-minor-menu {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+header .tnavbar .loged-in-minor-menu .link {
+  width: 50px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .tnavbar .loged-in-minor-menu .link .cart {
+  color: var(--black-color);
+}
+header .tnavbar .loged-in-minor-menu .link .btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  color: var(--black-color);
+  padding: 0;
+  border: 0 !important;
+}
+header .tnavbar .loged-in-minor-menu .link .btn img {
+  width: 40px;
+  height: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+header .tnavbar .loged-in-minor-menu .link .dropdown-menu {
+  padding: 0 !important;
+  background: var(--white-color);
+}
+header .tnavbar .loged-in-minor-menu .link .dropdown-menu li a {
+  padding: 6px 14px !important;
+  display: flex;
+  gap: 12px;
+  font-size: 14px;
+  align-items: center;
+  color: var(--black-color);
+}
+header .tnavbar .loged-in-minor-menu .link .dropdown-menu li a i {
+  width: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--main-color);
+}
+header .tnavbar .loged-in-minor-menu .link .dropdown-menu li a:hover {
+  background: var(--gray-background) !important;
+}
+header .tnavbar .loged-in-minor-menu .link .dropdown-menu .line {
+  width: 100%;
+  height: 1px;
+  background: var(--LightGray);
+}
+header .tnavbar .loged-in-minor-menu .link .dropdown-menu.show {
+  left: 0 !important;
+  top: 80px !important;
+  transform: translate(0px, 0px) !important;
+  border-radius: 0 !important;
+  border: 1px solid var(--LightGray);
+}
+header .tnavbar .loged-in-minor-menu .link .dropdown-menu .circle-filled {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--main-color);
+}
+header .tnavbar .loged-in-minor-menu .link .dropdown-menu .circle-outline {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid var(--main-color);
+}
+header .tnavbar .loged-in-minor-menu .link .dropdown-menu .image-wrap {
+  min-width: 45px;
+  min-height: 45px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+header .tnavbar .loged-in-minor-menu .link .dropdown-menu .image-wrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+header .tnavbar .loged-in-minor-menu .link .dropdown-menu .text-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+header .tnavbar .loged-in-minor-menu .link .dropdown-menu .text-wrap h6 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--black-color);
+  line-height: 20px;
+}
+header .tnavbar .loged-in-minor-menu .link .dropdown-menu .text-wrap .time {
+  font-size: 10px;
+  color: var(--text-color);
+  line-height: 20px;
+}
+header .tnavbar .loged-in-minor-menu .link .dropdown-menu .text-wrap h5 {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--black-color);
+}
+header .tnavbar .loged-in-minor-menu .link .dropdown-menu .text-wrap h5.me {
+  color: var(--main-color);
+}
+header .tnavbar .loged-in-minor-menu .link .dropdown-menu .text-wrap p {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--text-color);
+}
+header .tnavbar .loged-in-minor-menu .link .dropdown-menu .text-wrap .message-number {
+  width: 16px;
+  height: 16px;
+  font-size: 12px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .tnavbar .loged-in-minor-menu .link .dropdown-menu .showall {
+  width: 349px;
+  padding: 8px 14px;
+  background: var(--LightGray);
+  position: absolute;
+  bottom: 0;
+}
+header .tnavbar .loged-in-minor-menu .link .dropdown-menu .showall a {
+  color: var(--black-color);
+}
+header .tnavbar .loged-in-minor-menu .link .notifimenu {
+  width: 350px;
+  height: 300px;
+  position: relative;
+}
+header .tnavbar .loged-in-minor-menu .link .notifimenu li a {
+  padding: 12px 16px !important;
+}
+header .tnavbar .loged-in-minor-menu .link .languagemenu.show {
+  left: 232px !important;
+}
+header .tnavbar .loged-in-minor-menu .link .thememenu.show {
+  left: 182px !important;
+}
+header .tnavbar .loged-in-minor-menu .link .notifimenu.show {
+  left: 82px !important;
+}
+header .tnavbar .loged-in-minor-menu .link .searchmenu {
+  width: 100vw;
+  padding: 16px 32px !important;
+}
+header .tnavbar .loged-in-minor-menu .link .searchmenu input {
+  width: 100%;
+  border: none;
+  background: none;
+  outline: none;
+  color: var(--black-color);
+}
+
+main {
+  padding: 40px 0;
+}
+main .login-section {
+  padding: 32px 0;
+}
+main .login-section.forgetpassword {
+  padding: 0;
+}
+main .login-section h1 {
+  font-size: 32px;
+  color: var(--black-color);
+  font-weight: 600;
+}
+main .login-section .title {
+  color: var(--text-color);
+}
+main .login-section .form {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  width: min(100% - 24px, 660px);
+}
+main .login-section .form .input-field {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 10px;
+}
+main .login-section .form .input-field label {
+  color: var(--black-color);
+}
+main .login-section .form .input-field label i {
+  color: var(--main-color);
+}
+main .login-section .form .input-field input {
+  color: var(--black-color);
+  direction: rtl;
+  height: 56px;
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: var(--input-bg);
+}
+main .login-section .form .forgetpass {
+  align-self: flex-end;
+  color: var(--main-color);
+}
+main .login-section .form .noAccount {
+  margin-top: 32px;
+  color: var(--text-color);
+}
+main .login-section .form .noAccount span {
+  color: var(--main-color);
+}
+main .login-section .form p {
+  color: var(--text-color);
+}
+main .login-section .form p a {
+  color: var(--main-color);
+  text-decoration: underline;
+}
+main .login-section .form button {
+  width: 100%;
+  height: 56px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  outline: none;
+  color: #fff;
+  background: var(--main-color);
+}
+main .login-section .form .question {
+  padding: 0 0 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .login-section .form .question .quest {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--black-color);
+}
+main .login-section .form .question .vendorInput {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: relative;
+  cursor: pointer;
+}
+main .login-section .form .question .vendorInput::after {
+  display: block;
+  width: 48px;
+  height: 24px;
+  border-radius: 12px;
+  content: "";
+  background-color: var(--text-color);
+  transition: var(--main-transation);
+}
+main .login-section .form .question .vendorInput::before {
+  transition: var(--main-transation);
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  content: "";
+  background-color: var(--white-color);
+}
+main .login-section .form .question .vendorInput:checked::after {
+  background-color: var(--main-color);
+}
+main .login-section .form .question .vendorInput:checked::before {
+  right: initial;
+  left: 4px;
+}
+main .login-section .form .image-change-wrapper {
+  border-radius: 12px;
+  border: 1px solid var(--gray-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 16px 0;
+}
+main .login-section .form .image-change-wrapper .img-wrap {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .login-section .form .image-change-wrapper .img-wrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .login-section .form .image-change-wrapper .upload input {
+  display: none;
+}
+main .login-section .form .image-change-wrapper .upload .plus {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+main .login-section .form .image-change-wrapper .upload .plus i {
+  font-size: 20px;
+  color: #fff;
+}
+main .login-section .form .google-login {
+  margin-top: 24px;
+  border: none;
+  background: none;
+  outline: none;
+  width: 100%;
+  height: 48px;
+  border: 1px solid var(--input-hint);
+  color: var(--black-color);
+  gap: 16px;
+}
+main .login-section .form .line {
+  width: 100%;
+  height: 1px;
+  background: var(--gray-background);
+  position: relative;
+  margin-top: 24px;
+}
+main .login-section .form .line span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--white-color);
+  padding: 0 16px;
+  color: var(--black-color);
+}
+main .login-section .forgetpasswordForm {
+  margin-top: 0;
+  gap: 10px;
+}
+main .login-section .forgetpasswordForm h1 {
+  align-self: flex-start;
+  margin-top: 24px;
+  font-size: 24px;
+}
+main .login-section .forgetpasswordForm p {
+  font-size: 14px;
+  align-self: flex-start;
+  margin-bottom: 32px;
+}
+main .login-section .forgetpasswordForm p span {
+  color: var(--main-color);
+}
+main .login-section .forgetpasswordForm .input-field {
+  margin-bottom: 12px;
+}
+main .login-section .forgetpasswordForm .otp-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  direction: ltr !important;
+}
+main .login-section .forgetpasswordForm .otp-container .otp-input {
+  width: 70px;
+  height: 70px;
+  background: var(--main30-color);
+  padding: 10px 28px;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--main-color);
+}
+main .login-section .forgetpasswordForm .resend-code {
+  width: 100%;
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+}
+main .login-section .forgetpasswordForm .resend-code a {
+  color: var(--main-color);
+}
+main .login-section .forgetpasswordForm .resend-code .timer span {
+  color: var(--text-color);
+}
+main .login-section .otp-small h1,
+main .login-section .otp-small p {
+  align-self: center !important;
+}
+main .profile-section .profile-descripe {
+  box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.1019607843);
+  padding: 16px;
+  border-radius: 12px;
+  max-height: 508px;
+  overflow: hidden;
+}
+main .profile-section .profile-descripe .banner {
+  width: 100%;
+  height: 160px;
+  border-radius: 8px;
+  background-image: url(../images/bann.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  position: relative;
+}
+main .profile-section .profile-descripe .banner .user-avatar {
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 6px solid var(--white-color);
+}
+main .profile-section .profile-descripe .banner .user-avatar img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+main .profile-section .profile-descripe .banner .user-avatar .status {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 8px;
+  width: 20px;
+  border-radius: 50%;
+  height: 20px;
+  border: 4px solid var(--white-color);
+  background-color: #1bd00b;
+}
+main .profile-section .profile-descripe .name-rate {
+  margin-top: 75px;
+  padding: 0 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+main .profile-section .profile-descripe .name-rate h6 {
+  font-size: 22px;
+  color: var(--black-color);
+  font-weight: bold;
+}
+main .profile-section .profile-descripe .name-rate span {
+  color: var(--text-color);
+  font-weight: 500;
+}
+main .profile-section .profile-descripe .name-rate span i {
+  color: var(--main-color);
+}
+main .profile-section .profile-descripe .cash {
+  width: 100%;
+  margin-top: 12px;
+  padding: 16px;
+  border-radius: 12px;
+  background: var(--gray-background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .profile-section .profile-descripe .cash .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+main .profile-section .profile-descripe .cash .head h4 {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--black-color);
+}
+main .profile-section .profile-descripe .cash .head h4 i {
+  color: var(--main-color);
+}
+main .profile-section .profile-descripe .cash .head a {
+  padding: 0 10px;
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
+  border-radius: 4px;
+  transition: 0.3s ease-in-out;
+}
+main .profile-section .profile-descripe .cash .head a:hover {
+  background: var(--main-color);
+  color: #fff;
+}
+main .profile-section .profile-descripe .cash .row {
+  width: 100%;
+}
+main .profile-section .profile-descripe .cash .cash-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+}
+main .profile-section .profile-descripe .cash .cash-info span {
+  font-size: 14px;
+  color: var(--black-color);
+  font-weight: 600;
+}
+main .profile-section .profile-descripe .cash .cash-info h6 {
+  color: var(--main-color);
+  font-weight: bold;
+  font-size: 20px;
+}
+main .profile-section .profile-descripe .cash .cash-info h6 i {
+  color: var(--text-color);
+}
+main .profile-section .profile-taps .nav-pills {
+  justify-content: space-between;
+  padding: 0 24px 24px;
+}
+main .profile-section .profile-taps .nav-pills .nav-link {
+  color: var(--text-color);
+  font-size: 16px;
+  position: relative;
+  font-weight: 500;
+  padding: 8px 0;
+}
+main .profile-section .profile-taps .nav-pills .nav-link::after {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 6px;
+  width: 0;
+  content: "";
+  height: 2px;
+  background: var(--main-color);
+  transition: var(--main-transation);
+  opacity: 0;
+}
+main .profile-section .profile-taps .nav-pills .nav-link:hover {
+  color: var(--main-color);
+}
+main .profile-section .profile-taps .nav-pills .nav-link:hover::after {
+  width: 100%;
+  opacity: 1;
+}
+main .profile-section .profile-taps .tab-content {
+  padding: 0 24px;
+}
+main .profile-section .profile-taps .tab-content .statics-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+main .profile-section .profile-taps .tab-content .statics-list li h6 {
+  color: var(--black-color);
+  font-size: 16px;
+  font-weight: 500;
+}
+main .profile-section .profile-taps .tab-content .statics-list li span {
+  color: var(--main-color);
+  font-weight: bold;
+  font-size: 18px;
+}
+main .profile-section .profile-taps .tab-content .statics-list li span small {
+  color: var(--text-color);
+}
+main .profile-section .profile-taps .tab-content .verify-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-bottom: 24px;
+}
+main .profile-section .profile-taps .tab-content .verify-list li {
+  color: var(--black-color);
+}
+main .profile-section .profile-taps .tab-content .verify-list li i {
+  color: #26ba58;
+}
+main .profile-section .profile-taps .tab-content .unverified-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+}
+main .profile-section .profile-taps .tab-content .unverified-box h6 {
+  color: var(--black-color);
+  font-weight: 600;
+  font-size: 18px;
+}
+main .profile-section .profile-taps .tab-content .unverified-box a {
+  width: 100%;
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 0;
+  transition: var(--main-transation);
+  border-radius: 12px;
+}
+main .profile-section .profile-taps .tab-content .unverified-box a:hover {
+  background: var(--main-color);
+  color: #fff;
+}
+main .profile-section .profile-taps .tab-content .services-contianer .add-service {
+  width: 100%;
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 0;
+  transition: var(--main-transation);
+  border-radius: 12px;
+}
+main .profile-section .profile-taps .tab-content .services-contianer .add-service i {
+  margin: 0 4px;
+}
+main .profile-section .profile-taps .tab-content .services-contianer .add-service:hover {
+  background: var(--main-color);
+  color: #fff;
+}
+main .profile-section .profile-taps .tab-content .services-contianer .service-card {
+  border-radius: 4px;
+  background-color: var(--gray-background);
+  overflow: hidden;
+}
+main .profile-section .profile-taps .tab-content .services-contianer .service-card .img {
+  width: 100%;
+}
+main .profile-section .profile-taps .tab-content .services-contianer .service-card .img img {
+  max-width: 100%;
+  aspect-ratio: 1/0.65;
+}
+main .profile-section .profile-taps .tab-content .services-contianer .service-card .content {
+  padding: 12px;
+}
+main .profile-section .profile-taps .tab-content .services-contianer .service-card .content h6 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  margin-bottom: 12px;
+  color: var(--black-color);
+}
+main .profile-section .profile-taps .tab-content .services-contianer .service-card .content p {
+  font-size: 14px;
+  color: var(--text-color);
+}
+main .profile-section .profile-taps .tab-content .services-contianer .service-card .content p a {
+  color: var(--text-color);
+}
+main .profile-section .profile-taps .tab-content .services-contianer .service-card .content .sell-count {
+  font-size: 18px;
+  color: var(--black-color);
+  font-weight: 600;
+  font-style: italic;
+}
+main .profile-section .profile-taps .tab-content .services-contianer .service-card .content .start-from {
+  color: var(--black-color);
+  margin-top: 16px;
+}
+main .profile-section .profile-taps .tab-content .services-contianer .service-card .content .start-from b {
+  color: var(--main-color);
+}
+main .profile-section .profile-taps .nav-pills .nav-link.active,
+main .profile-section .profile-taps .nav-pills .show > .nav-link {
+  background: none;
+  color: var(--main-color);
+}
+main .profile-section .profile-taps .nav-pills .nav-link.active::after,
+main .profile-section .profile-taps .nav-pills .show > .nav-link::after {
+  width: 100%;
+}
+main .service-details .service-content .swiper {
+  max-height: 500px;
+}
+main .service-details .service-content .swiper .swiper-slide {
+  max-height: 500px;
+  background-color: var(--gray-background);
+}
+main .service-details .service-content .swiper .swiper-slide .img {
+  height: 100%;
+  width: 100%;
+}
+main .service-details .service-content .swiper .swiper-slide .img img,
+main .service-details .service-content .swiper .swiper-slide .img video {
+  height: 100%;
+  width: 100%;
+  aspect-ratio: 4/3;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .service-details .service-content .swiper .swiper-pagination-fraction {
+  top: 12px !important;
+  left: 12px !important;
+  width: 100px !important;
+  height: 30px !important;
+  direction: ltr !important;
+  color: #fff;
+}
+main .service-details .service-content .swiper .swiper-pagination-fraction .swiper-pagination-current {
+  font-size: 24px;
+  font-weight: bold;
+}
+main .service-details .service-content .swiper .swiper-button-next,
+main .service-details .service-content .swiper .swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  background: var(--main-color);
+  color: #fff;
+  border-radius: 50%;
+  opacity: 0;
+  transition: var(--main-transation);
+}
+main .service-details .service-content .swiper .swiper-button-next::after,
+main .service-details .service-content .swiper .swiper-button-prev::after {
+  font-size: 18px;
+}
+main .service-details .service-content .swiper:hover .swiper-button-next,
+main .service-details .service-content .swiper:hover .swiper-button-prev {
+  opacity: 1;
+}
+main .service-details .service-content .content {
+  padding: 120px 0 0;
+  position: relative;
+}
+main .service-details .service-content .content .service-owner-card {
+  width: 90%;
+  border: 4px solid var(--white-color);
+  height: 120px;
+  background: var(--gray-background);
+  position: absolute;
+  top: -60px;
+  padding: 10px;
+  right: 5%;
+  border-radius: 120px;
+  z-index: 99;
+}
+main .service-details .service-content .content .service-owner-card .owner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+main .service-details .service-content .content .service-owner-card .owner .img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+main .service-details .service-content .content .service-owner-card .owner .img img {
+  max-width: 100%;
+}
+main .service-details .service-content .content .service-owner-card .owner .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+main .service-details .service-content .content .service-owner-card .owner .title h6 {
+  font-size: 22px;
+  color: var(--black-color);
+  font-weight: bold;
+}
+main .service-details .service-content .content .service-owner-card .owner .title span {
+  color: var(--text-color);
+  font-weight: 500;
+}
+main .service-details .service-content .content .service-owner-card .owner .title span i {
+  color: var(--main-color);
+}
+main .service-details .service-content .content .service-owner-card .btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 0 16px;
+}
+main .service-details .service-content .content .service-owner-card .btns .butn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--main-color);
+  border-radius: 50%;
+  color: #fff;
+}
+main .service-details .service-content .content .service-owner-card .btns .butn i {
+  font-size: 20px !important;
+}
+main .service-details .service-content .content .service-owner-card .btns .dropdown .dropdown-menu {
+  background: var(--white-color);
+  border: 1px solid var(--gray-background);
+  padding: 32px;
+}
+main .service-details .service-content .content .service-owner-card .btns .dropdown .dropdown-menu h5 {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 16px;
+}
+main .service-details .service-content .content .service-owner-card .btns .dropdown .dropdown-menu p {
+  color: var(--text-color);
+  margin-bottom: 16px;
+}
+main .service-details .service-content .content .service-owner-card .btns .dropdown .dropdown-menu .link {
+  width: 100%;
+  padding: 14px;
+  background-color: var(--gray-background);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 12px;
+}
+main .service-details .service-content .content .service-owner-card .btns .dropdown .dropdown-menu .link button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  outline: none;
+}
+main .service-details .service-content .content .service-owner-card .btns .dropdown .dropdown-menu .link button i {
+  color: var(--main-color);
+}
+main .service-details .service-content .content .service-owner-card .btns .dropdown .dropdown-menu .link button:hover {
+  background: var(--main-color);
+}
+main .service-details .service-content .content .service-owner-card .btns .dropdown .dropdown-menu .link button:hover i {
+  color: #fff;
+}
+main .service-details .service-content .content .service-owner-card .btns .dropdown .dropdown-menu .link span {
+  cursor: pointer;
+  color: var(--text-color);
+  font-size: 12px;
+  position: relative;
+}
+main .service-details .service-content .content .service-owner-card .btns .dropdown .dropdown-menu .link span .alert {
+  position: absolute;
+  background: var(--input-bg);
+  padding: 4px 8px;
+  margin: 0;
+  bottom: -42px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: var(--main-transation);
+  opacity: 0;
+}
+main .service-details .service-content .content .service-owner-card .btns .dropdown .dropdown-menu .link span .alert::after {
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+          clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  width: 16px;
+  height: 10px;
+  background: var(--input-bg);
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -10px;
+}
+main .service-details .service-content .content .service-owner-card .btns .dropdown .dropdown-menu .social {
+  display: flex;
+  gap: 20px;
+}
+main .service-details .service-content .content .service-owner-card .btns .dropdown .dropdown-menu .social li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+}
+main .service-details .service-content .content .service-owner-card .btns .dropdown .dropdown-menu .social li a {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--main30-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .service-details .service-content .content .service-owner-card .btns .dropdown .dropdown-menu .social li a i {
+  color: var(--main-color);
+}
+main .service-details .service-content .content h4 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--black-color);
+}
+main .service-details .service-content .content p {
+  margin-top: 14px;
+  color: var(--text-color);
+}
+main .service-details .service-content .content p a,
+main .service-details .service-content .content p span {
+  color: var(--main-color);
+}
+main .service-details .service-content .content .more-develop {
+  padding: 48px 0 0;
+}
+main .service-details .service-content .content .more-develop h6 {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 28px;
+  color: var(--black-color);
+}
+main .service-details .service-content .content .more-develop .input-field {
+  gap: 16px;
+  margin-bottom: 28px;
+}
+main .service-details .service-content .content .more-develop .input-field input {
+  width: 20px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: relative;
+}
+main .service-details .service-content .content .more-develop .input-field input::after {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  content: "";
+  font-family: "FontAwesome";
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--input-hint);
+  border-radius: 4px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--main-color);
+}
+main .service-details .service-content .content .more-develop .input-field input:checked::after {
+  content: "\f00c";
+  background: var(--main-color);
+  color: #fff;
+  border-color: var(--main-color);
+}
+main .service-details .service-content .content .more-develop .input-field .label label {
+  font-size: 18px;
+  color: var(--black-color);
+  font-weight: 600;
+}
+main .service-details .service-content .content .more-develop .input-field .label p {
+  margin-top: 0;
+}
+main .service-details .service-content .content .add-cart {
+  width: 100%;
+  background: var(--gray-background);
+  border-radius: 14px;
+  padding: 24px 16px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+}
+main .service-details .service-content .content .add-cart .input-field {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+main .service-details .service-content .content .add-cart .input-field button {
+  border: none;
+  background: none;
+  outline: none;
+  min-width: 40px;
+  height: 40px;
+  background: var(--main30-color);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .service-details .service-content .content .add-cart .input-field button i {
+  color: var(--main-color);
+}
+main .service-details .service-content .content .add-cart .input-field input {
+  outline: none;
+  text-align: center;
+  width: 100%;
+  border: 1px solid var(--LightGray);
+  background: var(--white-color);
+  font-weight: 600;
+  color: var(--black-color);
+  border-radius: 12px;
+}
+main .service-details .service-content .content .add-cart .input-field input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+}
+main .service-details .service-content .content .add-cart .input-field input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+}
+main .service-details .service-content .content .add-cart .total {
+  width: 100%;
+}
+main .service-details .service-content .content .add-cart .total p {
+  margin-top: 0;
+  color: var(--black-color);
+}
+main .service-details .service-content .content .add-cart .total p span {
+  color: var(--text-color);
+}
+main .service-details .service-content .content .add-cart .total h6 {
+  color: var(--main-color);
+  font-weight: bold;
+  font-size: 22px;
+}
+main .service-details .service-content .content .add-cart .total h6 i {
+  margin: 0 4px;
+  color: var(--text-color);
+}
+main .service-details .service-content .content .add-cart .request-order {
+  height: 50px;
+  width: 100%;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+  background: var(--main-color);
+  color: #fff;
+  border-radius: 12px;
+}
+main .service-details .service-card {
+  width: 100%;
+  border-radius: 16px;
+  background: var(--input-bg);
+  padding: 16px;
+  margin-bottom: 24px;
+}
+main .service-details .service-card .label {
+  padding: 8px;
+  width: 160px;
+  border-radius: 12px;
+  background: var(--white-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+  gap: 4px;
+}
+main .service-details .service-card .card-ul {
+  margin: 24px 0 0;
+}
+main .service-details .service-card .card-ul li {
+  color: var(--black-color);
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+main .service-details .service-card .card-ul li:last-child {
+  margin-bottom: 0;
+}
+main .service-details .service-card .card-ul .rate {
+  color: var(--main-color);
+  font-weight: 600;
+}
+main .service-details .rating-cards-container {
+  overflow-y: scroll;
+  max-height: 620px;
+}
+main .service-details .rating-cards-container::-webkit-scrollbar {
+  display: none;
+}
+
+.progress {
+  height: 8px;
+  background-color: var(--gray-background);
+}
+
+.progress-bar-striped {
+  background-image: none;
+}
+
+.progress-bar {
+  background: var(--main-color);
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.rate {
+  display: flex;
+  gap: 28px;
+}
+.rate ul {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.rate ul li {
+  margin: 0 !important;
+}
+.rate ul li i {
+  font-size: 14px;
+  color: var(--LightGray);
+}
+.rate ul li.star i {
+  color: var(--star-color);
+}
+
+.rate-card {
+  background-color: var(--input-bg);
+  padding: 16px;
+  margin-bottom: 24px;
+  border-radius: 16px;
+}
+.rate-card .rate-owner {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.rate-card .rate-owner .rate-head {
+  display: flex;
+  gap: 16px;
+}
+.rate-card .rate-owner .rate-head .img {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.rate-card .rate-owner .rate-head .img img {
+  max-width: 100%;
+}
+.rate-card .rate-owner .rate-head .name-time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.rate-card .rate-owner .rate-head .name-time h5 {
+  font-size: 20px;
+  color: var(--black-color);
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.rate-card .rate-owner .rate-head .name-time span {
+  font-size: 14px;
+  color: var(--text-color);
+  font-weight: 500;
+}
+.rate-card .rate-owner .rate-text {
+  font-size: 16px;
+  color: var(--black-color);
+  font-weight: 500;
+}
+.rate-card .rating-cards .r-card {
+  padding: 12px 8px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 6px;
+  background: var(--white-color);
+}
+.rate-card .rating-cards .r-card h6 {
+  color: var(--black-color);
+  font-size: 14px;
+}
+
+#msform {
+  text-align: center;
+  position: relative;
+  margin-top: 28px;
+}
+#msform .action-button-previous {
+  height: 56px;
+  border-radius: 12px;
+  border: 1px solid var(--black-color);
+  width: 120px;
+  color: var(--black-color);
+  cursor: pointer;
+  margin: 32px 0px 10px 5px;
+  float: right;
+  background: none;
+}
+#msform .action-button {
+  height: 56px;
+  border-radius: 12px;
+  background: var(--main-color);
+  width: 200px;
+  color: white;
+  border: 0 none;
+  cursor: pointer;
+  margin: 32px 0px 10px 5px;
+  float: left;
+}
+#msform fieldset {
+  border: 0 none;
+  border-radius: 0.5rem;
+  width: 100%;
+  margin: 0;
+  padding-bottom: 20px;
+  position: relative;
+}
+#msform fieldset:not(:first-of-type) {
+  display: none;
+}
+#msform fieldset .purple-text {
+  padding: 40px 0 30px;
+  line-height: 36px;
+  font-size: 20px;
+  color: var(--black-color);
+}
+#msform fieldset a {
+  color: var(--main-color);
+}
+#msform fieldset .advice {
+  width: 100%;
+  margin: 40px 0;
+  border-radius: 4px;
+  background-color: var(--id-confirm);
+  position: relative;
+  padding-top: 22px;
+  padding-bottom: 32px;
+}
+#msform fieldset .advice .icon {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--id-confirm);
+  border: 2px solid var(--white-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#msform fieldset .advice .icon img {
+  max-height: 40px;
+}
+#msform fieldset .advice ul {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+#msform fieldset .advice ul li {
+  color: var(--black-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+#msform fieldset .advice ul li i {
+  width: 40px;
+  color: #7dc0f7;
+  font-size: 24px;
+}
+#msform fieldset h6 {
+  font-weight: 600;
+  margin-top: 24px;
+  font-size: 16px;
+  color: var(--black-color);
+}
+#msform fieldset p {
+  color: var(--main-color);
+}
+#msform fieldset .input-field {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 28px;
+  gap: 10px;
+}
+#msform fieldset .input-field label {
+  width: 100%;
+  color: var(--black-color);
+  text-align: justify;
+  font-weight: 500;
+}
+#msform fieldset .input-field label i {
+  color: var(--main-color);
+}
+#msform fieldset .input-field label .info-label {
+  color: var(--text-color);
+  font-size: 18px;
+}
+#msform fieldset .input-field label small {
+  color: var(--text-color);
+  margin: 16px 0;
+  display: block;
+}
+#msform fieldset .input-field .img-upload {
+  padding: 22px;
+  width: 100%;
+  height: 230px;
+  border: 1px solid var(--gray-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  cursor: pointer;
+}
+#msform fieldset .input-field .img-upload input {
+  display: none;
+}
+#msform fieldset .input-field .selcet-wrap {
+  position: relative;
+  width: 100%;
+}
+#msform fieldset .input-field .selcet-wrap::before {
+  content: "\f107";
+  font-family: "Font Awesome 6 pro";
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  color: var(--input-hint);
+}
+#msform fieldset .input-field .selcet-wrap .form-select {
+  font-size: 14px;
+  color: var(--input-hint);
+}
+#msform fieldset .input-field input,
+#msform fieldset .input-field textarea,
+#msform fieldset .input-field .form-select {
+  direction: rtl;
+  height: 56px;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  color: var(--black-color);
+  background: var(--input-bg);
+}
+#msform fieldset .input-field input::-moz-placeholder, #msform fieldset .input-field textarea::-moz-placeholder, #msform fieldset .input-field .form-select::-moz-placeholder {
+  color: var(--input-hint);
+}
+#msform fieldset .input-field input::placeholder,
+#msform fieldset .input-field textarea::placeholder,
+#msform fieldset .input-field .form-select::placeholder {
+  color: var(--input-hint);
+}
+#msform fieldset .input-field input:focus,
+#msform fieldset .input-field textarea:focus,
+#msform fieldset .input-field .form-select:focus {
+  box-shadow: none !important;
+}
+#msform fieldset .input-field textarea {
+  height: 170px;
+}
+#msform fieldset .input-field input[type=button] {
+  background: none;
+  border: 1px dashed var(--main-color);
+  color: var(--main-color);
+}
+#msform fieldset .input-field .inputs {
+  display: flex;
+  width: 100%;
+  gap: 16px;
+}
+#msform fieldset .input-field .inputs .country-picker {
+  width: 80px;
+  pointer-events: none;
+}
+#msform fieldset .input-field .inputs label {
+  width: 100%;
+  height: 140px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+#msform fieldset .input-field .inputs label .gender {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--black-color);
+}
+#msform fieldset .input-field .inputs label input {
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  height: 100%;
+  background-color: var(--light-bg);
+  border: 1px solid var(--LightGray);
+}
+#msform fieldset .input-field .inputs label input:checked {
+  background-color: var(--main30-color);
+  border: 1px solid var(--main-color);
+}
+#msform fieldset .input-field .otp-container {
+  margin-top: 32px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  direction: ltr !important;
+}
+#msform fieldset .input-field .otp-container .otp-input {
+  width: 70px;
+  height: 70px;
+  background: var(--main30-color);
+  padding: 10px 28px;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--main-color);
+}
+#msform fieldset .input-field .t-select {
+  width: 100%;
+  justify-content: space-between;
+}
+#msform fieldset .input-field .t-select .selcet-wrap:first-child {
+  width: 68%;
+}
+#msform fieldset .input-field .t-select .selcet-wrap:last-child {
+  width: 28%;
+}
+#msform fieldset .input-field .t-select .form-select {
+  margin: 0;
+}
+#msform fieldset .add-more-model {
+  width: 100%;
+  padding: 16px;
+  border-radius: 12px;
+  background: var(--input-bg);
+}
+#msform fieldset .add-more-model .delete-model {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 12px;
+}
+#msform fieldset .add-more-model .delete-model i {
+  font-size: 24px;
+  color: var(--main-color);
+  cursor: pointer;
+}
+#msform fieldset .add-more-model input,
+#msform fieldset .add-more-model .form-select {
+  background: var(--white-color);
+}
+#msform fieldset .resend-code {
+  width: 100%;
+  display: flex;
+  padding: 40px 0;
+  gap: 60px;
+  justify-content: center;
+}
+#msform fieldset .resend-code a {
+  color: var(--main-color);
+}
+#msform fieldset .resend-code .timer span {
+  color: var(--text-color);
+}/*# sourceMappingURL=style.css.map */
