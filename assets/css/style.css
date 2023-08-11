@@ -17,6 +17,7 @@
   --white-color: #fff;
   --main-color: #ba2649;
   --main30-color: #f5ccd6;
+  --check-color: #f5ccd6;
   --light-bg: #fafafa;
   --gray-background: #f4f4f4;
   --black-color: #231f20;
@@ -35,6 +36,7 @@
   --main-color: #cf2a51;
   --main30-color: #480e1d;
   --gray-background: #171717;
+  --check-color: #171717;
   --black-color: #fff;
   --text-color: #777777;
   --input-bg: #171717;
@@ -1092,57 +1094,6 @@ main .service-details .service-content .content p a,
 main .service-details .service-content .content p span {
   color: var(--main-color);
 }
-main .service-details .service-content .content .more-develop {
-  padding: 48px 0 0;
-}
-main .service-details .service-content .content .more-develop h6 {
-  font-weight: 600;
-  font-size: 20px;
-  margin-bottom: 28px;
-  color: var(--black-color);
-}
-main .service-details .service-content .content .more-develop .input-field {
-  gap: 16px;
-  margin-bottom: 28px;
-}
-main .service-details .service-content .content .more-develop .input-field input {
-  width: 20px;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  position: relative;
-}
-main .service-details .service-content .content .more-develop .input-field input::after {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  content: "";
-  font-family: "FontAwesome";
-  width: 20px;
-  height: 20px;
-  border: 1px solid var(--input-hint);
-  border-radius: 4px;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--main-color);
-}
-main .service-details .service-content .content .more-develop .input-field input:checked::after {
-  content: "\f00c";
-  background: var(--main-color);
-  color: #fff;
-  border-color: var(--main-color);
-}
-main .service-details .service-content .content .more-develop .input-field .label label {
-  font-size: 18px;
-  color: var(--black-color);
-  font-weight: 600;
-}
-main .service-details .service-content .content .more-develop .input-field .label p {
-  margin-top: 0;
-}
 main .service-details .service-content .content .add-cart {
   width: 100%;
   background: var(--gray-background);
@@ -1474,6 +1425,212 @@ main .chat-section .chat-container .chat-send form button i {
   margin-right: 4px;
   transform: scaleX(-1);
 }
+main .cart-section .service {
+  padding-bottom: 32px;
+  margin-bottom: 48px;
+  border-bottom: 1px dashed var(--text-color);
+}
+main .cart-section .service:last-child {
+  border-bottom: none;
+}
+main .cart-section .service-head {
+  width: 100%;
+  display: flex;
+  gap: 24px;
+}
+main .cart-section .service-head .img {
+  max-width: 150px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+main .cart-section .service-head .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+main .cart-section .service-head .title h5 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  margin-bottom: 10px;
+  color: var(--black-color);
+}
+main .cart-section .service-head .title .owner {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+main .cart-section .service-head .title .owner span {
+  color: var(--black-color);
+  font-weight: 500;
+}
+main .cart-section .service-head .title .owner .owner-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+main .cart-section .service-head .title .owner .owner-avatar img {
+  max-width: 100%;
+}
+main .checkout-section .label {
+  color: var(--text-color);
+  margin-bottom: 16px;
+}
+main .checkout-section .products-card {
+  margin-bottom: 24px;
+  width: 100%;
+  padding: 16px 24px;
+  border-radius: 16px;
+  background: var(--input-bg);
+}
+main .checkout-section .products-card .fees {
+  border-top: 1px dashed #dadada;
+  border-bottom: 1px dashed #dadada;
+}
+main .checkout-section .products-card li {
+  padding: 14px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .checkout-section .products-card li p {
+  color: var(--black-color);
+  font-weight: 400;
+}
+main .checkout-section .products-card li .total {
+  font-weight: 600;
+  font-size: 18px;
+}
+main .checkout-section .products-card li .price-count {
+  display: flex;
+  gap: 16px;
+}
+main .checkout-section .products-card li .price-count .count {
+  color: var(--text-color);
+}
+main .checkout-section .products-card li .price-count .price {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--black-color);
+}
+main .checkout-section .products-card li .price-count .price i {
+  font-size: 16px;
+  color: var(--main-color);
+}
+main .checkout-section form .label {
+  width: 100%;
+  height: 100px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+main .checkout-section form .label img {
+  max-height: 20px;
+}
+main .checkout-section form .label .type {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--black-color);
+}
+main .checkout-section form .label input {
+  border-radius: 8px;
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  height: 100%;
+  background-color: var(--light-bg);
+  border: 1px solid var(--LightGray);
+}
+main .checkout-section form .label input:checked {
+  background-color: var(--check-color);
+  border: 1px solid var(--main-color);
+}
+main .checkout-section form .info-card {
+  margin-top: 24px;
+  width: 100%;
+  padding: 24px;
+  border-radius: 16px;
+  background: var(--input-bg);
+}
+main .checkout-section form .info-card .input-field {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+main .checkout-section form .info-card .input-field label {
+  color: var(--black-color);
+}
+main .checkout-section form .info-card .input-field input {
+  color: var(--black-color);
+  direction: rtl;
+  height: 56px;
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: var(--white-color);
+}
+main .checkout-section form .info-card .input-field .inputs {
+  margin-top: 16px;
+  display: flex;
+  width: 100%;
+  gap: 24px;
+}
+main .checkout-section form .info-card .input-field .inputs input {
+  width: 100%;
+}
+main .checkout-section form .info-card .input-field-check {
+  display: flex;
+  gap: 12px;
+}
+main .checkout-section form .info-card .input-field-check label {
+  color: var(--black-color);
+}
+main .checkout-section form .info-card .pay {
+  width: 100%;
+  border-radius: 16px;
+  padding: 16px;
+  background: var(--white-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+main .checkout-section form .info-card .pay p {
+  color: var(--black-color);
+}
+main .checkout-section form .info-card .pay p span {
+  color: var(--black-color);
+  font-size: 26px;
+  font-weight: bold;
+}
+main .checkout-section form .info-card .pay p i {
+  color: var(--main-color);
+}
+main .checkout-section form .info-card .pay button {
+  border: none;
+  background: none;
+  outline: none;
+  background: var(--main-color);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 12px;
+}
 
 .progress {
   height: 8px;
@@ -1571,6 +1728,116 @@ main .chat-section .chat-container .chat-send form button i {
 .rate-card .rating-cards .r-card h6 {
   color: var(--black-color);
   font-size: 14px;
+}
+
+.more-develop {
+  padding: 32px 0 0;
+}
+.more-develop h6 {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 28px;
+  color: var(--black-color);
+}
+.more-develop .input-field {
+  gap: 16px;
+  margin-bottom: 28px;
+}
+.more-develop .input-field .label label {
+  font-size: 16px;
+  color: var(--black-color);
+  font-weight: 600;
+}
+.more-develop .input-field .label p {
+  margin-top: 0 !important;
+  font-size: 14px;
+}
+
+.add-cart {
+  background: var(--input-bg);
+  border-radius: 14px;
+  padding: 24px 16px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+}
+.add-cart .input-field {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+.add-cart .input-field button {
+  border: none;
+  background: none;
+  outline: none;
+  min-width: 40px;
+  height: 40px;
+  background: var(--main30-color);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add-cart .input-field button i {
+  color: var(--main-color);
+}
+.add-cart .input-field input {
+  outline: none;
+  text-align: center;
+  width: 100%;
+  border: 1px solid var(--LightGray);
+  background: var(--white-color);
+  font-weight: 600;
+  color: var(--black-color);
+  border-radius: 12px;
+}
+.add-cart .input-field input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+}
+.add-cart .input-field input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+}
+.add-cart .total {
+  width: 100%;
+}
+.add-cart .total button {
+  border: none;
+  background: none;
+  outline: none;
+}
+.add-cart .total button i {
+  color: var(--main-color);
+  font-size: 20px;
+}
+.add-cart .total p {
+  margin-top: 0;
+  color: var(--black-color);
+}
+.add-cart .total p span {
+  color: var(--text-color);
+}
+.add-cart .total h6 {
+  color: var(--main-color);
+  font-weight: bold;
+  font-size: 22px;
+}
+.add-cart .total h6 i {
+  margin: 0 4px;
+  color: var(--text-color);
+}
+.add-cart .request-order {
+  height: 50px;
+  width: 100%;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+  background: var(--main-color);
+  color: #fff;
+  border-radius: 12px;
 }
 
 #msform {
@@ -1802,7 +2069,7 @@ main .chat-section .chat-container .chat-send form button i {
   border: 1px solid var(--LightGray);
 }
 #msform fieldset .input-field .inputs label input:checked {
-  background-color: var(--main30-color);
+  background-color: var(--check-color);
   border: 1px solid var(--main-color);
 }
 #msform fieldset .input-field .otp-container {
@@ -1878,4 +2145,35 @@ main .chat-section .chat-container .chat-send form button i {
 
 .nav-pills .nav-link {
   padding: 16px;
+}
+
+input[type=checkbox] {
+  width: 20px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: relative;
+}
+input[type=checkbox]::after {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  content: "";
+  font-family: "FontAwesome";
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--input-hint);
+  border-radius: 4px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--main-color);
+}
+input[type=checkbox]:checked::after {
+  content: "\f00c";
+  background: var(--main-color);
+  color: #fff;
+  border-color: var(--main-color);
 }/*# sourceMappingURL=style.css.map */
