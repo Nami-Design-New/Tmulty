@@ -94,7 +94,7 @@
                         </button>
                         <ul class="dropdown-menu notifimenu" aria-labelledby="notifimenu">
                             <li>
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="chat.html">
                                     <div class="image-wrap">
                                         <img src="assets/images/av1.png" alt="user">
                                     </div>
@@ -114,7 +114,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="chat.html">
                                     <div class="image-wrap">
                                         <img src="assets/images/av2.png" alt="user">
                                     </div>
@@ -131,7 +131,7 @@
                                 </a>
                             </li>
                             <div class="showall">
-                                <a href="#">جميع الإشعارات</a>
+                                <a href="chat.html">جميع الإشعارات</a>
                             </div>
                         </ul>
                     </li>
@@ -319,49 +319,13 @@
                                         <div class="input-field">
                                             <label for="add-more-devlop">
                                                 <div class="d-flex justify-content-between align-items-center">
-                                                    <span>تعليمات للمشتري</span>
+                                                    <span>أضف تطويراً لهذه الخدمة</span>
                                                     <i class="info-label fa-light fa-circle-info"></i>
                                                 </div>
                                             </label>
-                                            <input type="button" value="أضف تطويراً لهذه الخدمة">
+                                            <input id="addBtn" type="button" value="أضف تطويراً لهذه الخدمة">
                                         </div>
-                                        <div class="add-more-model">
-                                            <div class="delete-model">
-                                                <i class="fa-light fa-circle-xmark"></i>
-                                            </div>
-                                            <div class="input-field m-0">
-                                                <input type="text" id="service-name" name="service-name"
-                                                    placeholder="مثال : تصميم وبرمجة مواقع">
-                                                <div class="selcet-wrap">
-                                                    <select class="form-select form-select-lg" id="service-main-type">
-                                                        <option selected>مقابل 5 دولار اضافة لسعر الخدمة</option>
-                                                        <option value="1">One</option>
-                                                        <option value="2">Two</option>
-                                                        <option value="3">Three</option>
-                                                    </select>
-                                                </div>
-                                                <div class="d-flex t-select">
-                                                    <div class="selcet-wrap">
-                                                        <select class="form-select form-select-lg"
-                                                            id="service-main-type">
-                                                            <option selected>مقابل 5 دولار اضافة لسعر الخدمة</option>
-                                                            <option value="1">One</option>
-                                                            <option value="2">Two</option>
-                                                            <option value="3">Three</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="selcet-wrap">
-                                                        <select class="form-select form-select-lg"
-                                                            id="service-main-type">
-                                                            <option selected>يوم واحد</option>
-                                                            <option value="1">One</option>
-                                                            <option value="2">Two</option>
-                                                            <option value="3">Three</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <div id="add-cards-container"></div>
                                     </div>
                                     <input type="button" name="next" class="next action-button" value="تأكيد واضافة" />
                                     <input type="button" name="previous" class="previous action-button-previous"
@@ -446,6 +410,68 @@
                 return false;
             })
         });
+    </script>
+    <script>
+        let count = 0;
+        let addBtn = document.getElementById("addBtn");
+        let deleteBtn = document.getElementById("delet-model")
+        let addingContainer = document.getElementById("add-cards-container");
+        addBtn.addEventListener("click", () => {
+            count++;
+            let container = "";
+            for (let i = 0; i < count; i++) {
+                container += `<div id=${i} class="add-more-model">
+                                            <div class="delete-model">
+                                                <i class="fa-light fa-circle-xmark" data-card-id="${i}"></i>
+                                            </div>
+                                            <div class="input-field m-0">
+                                                <input type="text" id="service-name" name="service-name"
+                                                    placeholder="مثال : تصميم وبرمجة مواقع">
+                                                <div class="selcet-wrap">
+                                                    <select class="form-select form-select-lg" id="service-main-type">
+                                                        <option selected>مقابل 5 دولار اضافة لسعر الخدمة</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+                                                <div class="d-flex t-select">
+                                                    <div class="selcet-wrap">
+                                                        <select class="form-select form-select-lg"
+                                                            id="service-main-type">
+                                                            <option selected>مقابل 5 دولار اضافة لسعر الخدمة</option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="selcet-wrap">
+                                                        <select class="form-select form-select-lg"
+                                                            id="service-main-type">
+                                                            <option selected>يوم واحد</option>
+                                                            <option value="1">One</option>
+                                                            <option value="2">Two</option>
+                                                            <option value="3">Three</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>`
+            }
+            addingContainer.innerHTML = container;
+            // Attach event listeners to delete icons
+            let deleteIcons = document.querySelectorAll(".delete-model i");
+            deleteIcons.forEach(icon => {
+                icon.addEventListener("click", (event) => {
+                    let cardId = event.target.getAttribute("data-card-id");
+                    let cardToDelete = document.getElementById(cardId);
+                    if (cardToDelete) {
+                        cardToDelete.remove();
+                    }
+                    count--;
+                });
+            });
+        })
     </script>
 </body>
 
