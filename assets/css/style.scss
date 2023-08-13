@@ -54,7 +54,7 @@
   --main30-color: #480e1d;
   --gray-background: #171717;
   --check-color: #171717;
-  --black-color: #fff;
+  --black-color: #e0dcdd;
   --text-color: #777777;
   --input-bg: #171717;
   --LightGray: #171717;
@@ -351,15 +351,21 @@ main {
             color: var(--main-color);
           }
         }
-        input {
+        input,
+        textarea {
           color: var(--black-color);
           direction: rtl;
           height: 56px;
+          width: 100%;
           border: none;
           outline: none;
           padding: 10px 16px;
           border-radius: 12px;
           background: var(--input-bg);
+          font-size: 14px;
+        }
+        textarea {
+          height: 230px;
         }
       }
       .forgetpass {
@@ -442,16 +448,16 @@ main {
         flex-direction: column;
         padding: 16px 0;
         .img-wrap {
-          width: 160px;
-          height: 160px;
+          width: 130px;
+          height: 130px;
           border-radius: 50%;
           overflow: hidden;
-          border: 1px solid var(--text-color);
           @include centerFlex();
           img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: center;
           }
         }
         .upload {
@@ -1372,6 +1378,7 @@ main {
       gap: 24px;
       .img {
         max-width: 150px;
+        max-height: 110px;
         border-radius: 4px;
         overflow: hidden;
         img {
@@ -1409,50 +1416,76 @@ main {
         }
       }
     }
+    .progress-card {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      .progress-details {
+        @include space-between();
+        gap: 16px;
+        .details {
+          height: 60px;
+          font-size: 14px;
+          min-width: 100px;
+          border-radius: 12px;
+          @include centerFlex();
+          color: var(--main-color);
+          background: var(--check-color);
+        }
+        .chat {
+          height: 60px;
+          font-size: 20px;
+          min-width: 60px;
+          border-radius: 50%;
+          @include centerFlex();
+          color: var(--main-color);
+          background: var(--check-color);
+        }
+        .pro-container {
+          height: 60px;
+          padding: 8px 12px;
+          width: 100%;
+          background: var(--input-bg);
+          border: 1px solid var(--gray-background);
+          border-radius: 12px;
+          .progress {
+            background: var(--white-color) !important;
+          }
+          .sucses {
+            background: #26ba35 !important;
+          }
+          .status {
+            font-size: 12px;
+            margin-bottom: 4px;
+            color: var(--text-color);
+          }
+        }
+      }
+      .time-price {
+        @include space-between();
+        span {
+          color: var(--black-color);
+          i {
+            color: var(--text-color);
+          }
+        }
+        h5 {
+          font-size: 24px;
+          font-weight: bold;
+          color: var(--black-color);
+          i {
+            font-size: 18px;
+            color: var(--main-color);
+          }
+        }
+      }
+    }
   }
   .checkout-section {
     .label {
       color: var(--text-color);
       margin-bottom: 16px;
-    }
-    .products-card {
-      margin-bottom: 24px;
-      width: 100%;
-      padding: 16px 24px;
-      border-radius: 16px;
-      background: var(--input-bg);
-      .fees {
-        border-top: 1px dashed #dadada;
-        border-bottom: 1px dashed #dadada;
-      }
-      li {
-        padding: 14px 0;
-        @include space-between();
-        p {
-          color: var(--black-color);
-          font-weight: 400;
-        }
-        .total {
-          font-weight: 600;
-          font-size: 18px;
-        }
-        .price-count {
-          display: flex;
-          gap: 16px;
-          .count {
-            color: var(--text-color);
-          }
-          .price {
-            font-size: 20px;
-            font-weight: 600;
-            color: var(--black-color);
-            i {
-              font-size: 16px;
-              color: var(--main-color);
-            }
-          }
-        }
-      }
     }
     form {
       .label {
@@ -1750,6 +1783,58 @@ main {
     background: var(--main-color);
     color: #fff;
     border-radius: 12px;
+  }
+}
+.products-card {
+  margin-bottom: 24px;
+  width: 100%;
+  padding: 16px 24px;
+  border-radius: 16px;
+  background: var(--input-bg);
+  .fees {
+    border-top: 1px dashed #dadada;
+    border-bottom: 1px dashed #dadada;
+  }
+  li {
+    padding: 14px 0;
+    @include space-between();
+    p {
+      color: var(--black-color);
+      font-weight: 400;
+      width: 75%;
+    }
+    .total {
+      font-weight: 600;
+      font-size: 18px;
+    }
+    .price-count {
+      display: flex;
+      gap: 16px;
+      .count {
+        color: var(--text-color);
+      }
+      .price {
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--black-color);
+        i {
+          font-size: 16px;
+          color: var(--main-color);
+        }
+      }
+    }
+  }
+  .order {
+    li {
+      border-bottom: 1px dashed #dadada;
+      &:last-child {
+        border-bottom: 0;
+      }
+      .order-number {
+        font-weight: bold;
+        font-size: 18px;
+      }
+    }
   }
 }
 // wizard form

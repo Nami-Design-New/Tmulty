@@ -37,7 +37,7 @@
   --main30-color: #480e1d;
   --gray-background: #171717;
   --check-color: #171717;
-  --black-color: #fff;
+  --black-color: #e0dcdd;
   --text-color: #777777;
   --input-bg: #171717;
   --LightGray: #171717;
@@ -370,15 +370,21 @@ main .login-section .form .input-field label {
 main .login-section .form .input-field label i {
   color: var(--main-color);
 }
-main .login-section .form .input-field input {
+main .login-section .form .input-field input,
+main .login-section .form .input-field textarea {
   color: var(--black-color);
   direction: rtl;
   height: 56px;
+  width: 100%;
   border: none;
   outline: none;
   padding: 10px 16px;
   border-radius: 12px;
   background: var(--input-bg);
+  font-size: 14px;
+}
+main .login-section .form .input-field textarea {
+  height: 230px;
 }
 main .login-section .form .forgetpass {
   align-self: flex-end;
@@ -469,11 +475,10 @@ main .login-section .form .image-change-wrapper {
   padding: 16px 0;
 }
 main .login-section .form .image-change-wrapper .img-wrap {
-  width: 160px;
-  height: 160px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   overflow: hidden;
-  border: 1px solid var(--text-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -483,6 +488,8 @@ main .login-section .form .image-change-wrapper .img-wrap img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 main .login-section .form .image-change-wrapper .upload input {
   display: none;
@@ -1440,6 +1447,7 @@ main .cart-section .service-head {
 }
 main .cart-section .service-head .img {
   max-width: 150px;
+  max-height: 110px;
   border-radius: 4px;
   overflow: hidden;
 }
@@ -1476,50 +1484,82 @@ main .cart-section .service-head .title .owner .owner-avatar {
 main .cart-section .service-head .title .owner .owner-avatar img {
   max-width: 100%;
 }
-main .checkout-section .label {
-  color: var(--text-color);
-  margin-bottom: 16px;
-}
-main .checkout-section .products-card {
-  margin-bottom: 24px;
+main .cart-section .progress-card {
   width: 100%;
-  padding: 16px 24px;
-  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+main .cart-section .progress-card .progress-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+main .cart-section .progress-card .progress-details .details {
+  height: 60px;
+  font-size: 14px;
+  min-width: 100px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--main-color);
+  background: var(--check-color);
+}
+main .cart-section .progress-card .progress-details .chat {
+  height: 60px;
+  font-size: 20px;
+  min-width: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--main-color);
+  background: var(--check-color);
+}
+main .cart-section .progress-card .progress-details .pro-container {
+  height: 60px;
+  padding: 8px 12px;
+  width: 100%;
   background: var(--input-bg);
+  border: 1px solid var(--gray-background);
+  border-radius: 12px;
 }
-main .checkout-section .products-card .fees {
-  border-top: 1px dashed #dadada;
-  border-bottom: 1px dashed #dadada;
+main .cart-section .progress-card .progress-details .pro-container .progress {
+  background: var(--white-color) !important;
 }
-main .checkout-section .products-card li {
-  padding: 14px 0;
+main .cart-section .progress-card .progress-details .pro-container .sucses {
+  background: #26ba35 !important;
+}
+main .cart-section .progress-card .progress-details .pro-container .status {
+  font-size: 12px;
+  margin-bottom: 4px;
+  color: var(--text-color);
+}
+main .cart-section .progress-card .time-price {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-main .checkout-section .products-card li p {
+main .cart-section .progress-card .time-price span {
   color: var(--black-color);
-  font-weight: 400;
 }
-main .checkout-section .products-card li .total {
-  font-weight: 600;
-  font-size: 18px;
-}
-main .checkout-section .products-card li .price-count {
-  display: flex;
-  gap: 16px;
-}
-main .checkout-section .products-card li .price-count .count {
+main .cart-section .progress-card .time-price span i {
   color: var(--text-color);
 }
-main .checkout-section .products-card li .price-count .price {
-  font-size: 20px;
-  font-weight: 600;
+main .cart-section .progress-card .time-price h5 {
+  font-size: 24px;
+  font-weight: bold;
   color: var(--black-color);
 }
-main .checkout-section .products-card li .price-count .price i {
-  font-size: 16px;
+main .cart-section .progress-card .time-price h5 i {
+  font-size: 18px;
   color: var(--main-color);
+}
+main .checkout-section .label {
+  color: var(--text-color);
+  margin-bottom: 16px;
 }
 main .checkout-section form .label {
   width: 100%;
@@ -1838,6 +1878,59 @@ main .checkout-section form .info-card .pay button {
   background: var(--main-color);
   color: #fff;
   border-radius: 12px;
+}
+
+.products-card {
+  margin-bottom: 24px;
+  width: 100%;
+  padding: 16px 24px;
+  border-radius: 16px;
+  background: var(--input-bg);
+}
+.products-card .fees {
+  border-top: 1px dashed #dadada;
+  border-bottom: 1px dashed #dadada;
+}
+.products-card li {
+  padding: 14px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.products-card li p {
+  color: var(--black-color);
+  font-weight: 400;
+  width: 75%;
+}
+.products-card li .total {
+  font-weight: 600;
+  font-size: 18px;
+}
+.products-card li .price-count {
+  display: flex;
+  gap: 16px;
+}
+.products-card li .price-count .count {
+  color: var(--text-color);
+}
+.products-card li .price-count .price {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--black-color);
+}
+.products-card li .price-count .price i {
+  font-size: 16px;
+  color: var(--main-color);
+}
+.products-card .order li {
+  border-bottom: 1px dashed #dadada;
+}
+.products-card .order li:last-child {
+  border-bottom: 0;
+}
+.products-card .order li .order-number {
+  font-weight: bold;
+  font-size: 18px;
 }
 
 #msform {
