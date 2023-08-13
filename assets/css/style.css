@@ -17,6 +17,7 @@
   --white-color: #fff;
   --main-color: #ba2649;
   --main30-color: #f5ccd6;
+  --main10-color: #fceef1;
   --check-color: #f5ccd6;
   --light-bg: #fafafa;
   --gray-background: #f4f4f4;
@@ -35,6 +36,7 @@
   --white-color: #0d0d0d;
   --main-color: #cf2a51;
   --main30-color: #480e1d;
+  --main10-color: #171717;
   --gray-background: #171717;
   --check-color: #171717;
   --black-color: #e0dcdd;
@@ -1314,6 +1316,16 @@ main .chat-section .chat-container .chat-head .setting {
   color: var(--input-hint);
   border-radius: 50%;
 }
+main .chat-section .chat-container .ordered-service {
+  height: 58px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  background: var(--main10-color);
+}
+main .chat-section .chat-container .ordered-service p {
+  color: var(--main-color);
+}
 main .chat-section .chat-container .inner-container {
   display: flex;
   flex-direction: column;
@@ -1556,6 +1568,32 @@ main .cart-section .progress-card .time-price h5 {
 main .cart-section .progress-card .time-price h5 i {
   font-size: 18px;
   color: var(--main-color);
+}
+main .cart-section .order-buttons {
+  margin-top: 48px;
+  display: flex;
+  gap: 24px;
+}
+main .cart-section .order-buttons button {
+  border: none;
+  background: none;
+  outline: none;
+  width: 100%;
+  height: 45px;
+  border-radius: 14px;
+}
+main .cart-section .order-buttons .cancle-order {
+  background: var(--black-color);
+  color: var(--white-color);
+}
+main .cart-section .order-buttons .report-order {
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
+  transition: var(--main-transation);
+}
+main .cart-section .order-buttons .report-order:hover {
+  background: var(--main-color);
+  color: #fff;
 }
 main .checkout-section .label {
   color: var(--text-color);
