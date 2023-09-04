@@ -10,10 +10,10 @@ lightThemeBtn.addEventListener("click", () => {
     b.src = "assets/images/logo.svg";
   });
   nami.src = "assets/images/nami.svg";
-  // document.querySelector(".illustration img").src =
-  //   "assets/images/forgetpass1.svg";
-  // document.querySelector(".otp img").src = "assets/images/otp1.svg";
-  // document.querySelector(".confirmpass img").src = "assets/images/newpass1.svg";
+  document.querySelector(".illustration img").src =
+    "assets/images/forgetpass1.svg";
+  document.querySelector(".otp img").src = "assets/images/otp1.svg";
+  document.querySelector(".confirmpass img").src = "assets/images/newpass1.svg";
 });
 darkThemeBtn.addEventListener("click", () => {
   body.classList.add("dark-theme");
@@ -21,10 +21,10 @@ darkThemeBtn.addEventListener("click", () => {
     b.src = "assets/images/logo-dark.svg";
   });
   nami.src = "assets/images/nami2.svg";
-  // document.querySelector(".illustration img").src =
-  //   "assets/images/forgetpass2.svg";
-  // document.querySelector(".otp img").src = "assets/images/otp2.svg";
-  // document.querySelector(".confirmpass img").src = "assets/images/newpass2.svg";
+  document.querySelector(".illustration img").src =
+    "assets/images/forgetpass2.svg";
+  document.querySelector(".otp img").src = "assets/images/otp2.svg";
+  document.querySelector(".confirmpass img").src = "assets/images/newpass2.svg";
 });
 $(document).ready(function() {
   $(".service-card h6").each(function() {
@@ -65,6 +65,31 @@ var categoriesSwiper = new Swiper(".categories-swiper", {
     },
     768: {
       slidesPerView: 3
+    },
+    350: {
+      slidesPerView: 1
+    }
+  }
+});
+// testimonials slider
+var swiper = new Swiper(".testimonilas", {
+  loop: true,
+  spaceBetween: 30,
+  speed: 2000,
+  centeredSlides: true,
+  pagination: {
+    el: ".testimonialsSwiperPagination",
+    clickable: true
+  },
+  autoplay: {
+    delay: 2500
+  },
+  breakpoints: {
+    992: {
+      slidesPerView: 3
+    },
+    768: {
+      slidesPerView: 2
     },
     350: {
       slidesPerView: 1
