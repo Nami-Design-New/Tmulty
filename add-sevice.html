@@ -29,7 +29,18 @@
                 </div>
                 <ul class="nav-links">
                     <li class="nav-link">
-                        <a href="#">+ اضف خدمه</a>
+                        <a href="add-sevice.html"><i class="far fa-plus"></i> اضف خدمه</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="departments.html"><i class="far fa-cube"></i> الأقسام </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="purchases.html"><i class="fal fa-shopping-bag"></i> المشتريات </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="recieved-requests.html">
+                            <i class="fal fa-clipboard-list-check"></i> الطلبات الواردة
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -40,7 +51,7 @@
                             aria-expanded="false">
                             <i class="ti ti-md ti-search"></i>
                         </button>
-                        <form class="dropdown-menu searchmenu" aria-labelledby="searchmenu">
+                        <form action="search.html" class="dropdown-menu searchmenu" aria-labelledby="searchmenu">
                             <input type="text" placeholder="ابحث عن...">
                         </form>
                     </li>
@@ -167,7 +178,7 @@
                             </li>
                             <div class="line"></div>
                             <li>
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="edit-profile.html">
                                     <i class="fa-sharp fa-solid fa-pen-to-square"></i>
                                     تعديل الحساب
                                 </a>
@@ -356,8 +367,117 @@
             </div>
         </section>
     </main>
-    <script src="assets/js/app.js"></script>
+    <footer>
+        <div class="container">
+            <div class="row upper-row">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="about">
+                        <a class="logo">
+                            <img class="brand" src="assets/images/logo.svg" alt="">
+                        </a>
+                        <p>
+                            مرحبًا بك في أكبر سوق عربي لبيع وشراء الخدمات المصغرة. نحن هنا لمساعدتك في تحقيق أهدافك
+                            بسهولة
+                            وأمان. يمكنك الاعتماد على منصتنا لإتمام مهامك ومشاريعك بأسعار تبدأ من 5$ فقط.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="links pa-24">
+                        <h4>روابط مهمة</h4>
+                        <ul>
+                            <li>
+                                <a href="about.html">حول Tmalty</a>
+                            </li>
+                            <li>
+                                <a href="contact.html">تواصل معنا</a>
+                            </li>
+                            <li>
+                                <a href="faq.html">الاسئلة الشائعة</a>
+                            </li>
+                            <li>
+                                <a href="terms.html">ضمان الحقوق</a>
+                            </li>
+                            <li>
+                                <a href="how-it-works.html">كيف يعمل Tmalty</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="links pa-24">
+                        <h4>الاقسام</h4>
+                        <ul>
+                            <li><a href="search.html">برمجة وتطوير</a></li>
+                            <li><a href="search.html">تصميم فيديو</a></li>
+                            <li><a href="search.html">تعليم عن بعد</a></li>
+                            <li><a href="search.html">كتابة و ترجمة</a></li>
+                            <li><a href="search.html">التسويق الإلكتروني</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="d-flex flex-column gap-5 pa-24">
+                        <div class="download-app">
+                            <h4>تحميل التطبيق</h4>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <div class="text">
+                                            <p>
+                                                App Store
+                                            </p>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fa-brands fa-apple"></i>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="text">
+                                            <p>
+                                                Google Play
+                                            </p>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fa-brands fa-google-play"></i>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="follow">
+                            <ul>
+                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="copy-rights">
+                        <p>
+                            حقوق النشر © 2023 جميع الحقوق محفوظة <a target="_blank" href="https://nami-tec.com">
+                                <img id="nami" src="assets/images/nami.svg" alt="">
+                            </a>
+                        </p>
+                        <ul class="pay-methods">
+                            <li><i class="fa-brands fa-cc-visa"></i></li>
+                            <li><i class="fa-brands fa-cc-mastercard"></i></li>
+                            <li><i class="fa-brands fa-cc-paypal"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/app.js"></script>
     <script>
         $(document).ready(function () {
             var current_fs, next_fs, previous_fs; //fieldsets
