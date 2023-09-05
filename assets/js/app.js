@@ -64,10 +64,10 @@ var categoriesSwiper = new Swiper(".categories-swiper", {
       slidesPerView: 4
     },
     768: {
-      slidesPerView: 3
+      slidesPerView: 3.5
     },
     350: {
-      slidesPerView: 1
+      slidesPerView: 1.5
     }
   }
 });
@@ -75,7 +75,7 @@ var categoriesSwiper = new Swiper(".categories-swiper", {
 var swiper = new Swiper(".testimonilas", {
   loop: true,
   spaceBetween: 30,
-  speed: 2000,
+  speed: 1000,
   centeredSlides: true,
   pagination: {
     el: ".testimonialsSwiperPagination",
@@ -94,5 +94,15 @@ var swiper = new Swiper(".testimonilas", {
     350: {
       slidesPerView: 1
     }
+  }
+});
+let toggler = document.querySelector(".toogler");
+let menu = document.querySelector(".small-media-menu");
+toggler.addEventListener("click", () => {
+  menu.classList.toggle("show");
+  if (menu.classList.contains("show")) {
+    toggler.classList.add("close");
+  } else {
+    toggler.classList.remove("close");
   }
 });
