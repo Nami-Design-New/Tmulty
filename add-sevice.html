@@ -44,7 +44,8 @@
                         <a href="departments.html"><i class="far fa-cube"></i> الأقسام </a>
                     </li>
                     <li class="nav-link">
-                        <a href="recieved-requests.html"><i class="fa-sharp fa-light fa-clipboard-list-check"></i> الطلبات الواردة</a>
+                        <a href="recieved-requests.html"><i class="fa-sharp fa-light fa-clipboard-list-check"></i>
+                            الطلبات الواردة</a>
                     </li>
                     <li class="nav-link">
                         <a href="add-sevice.html"><i class="far fa-plus"></i> اضف خدمه</a>
@@ -246,165 +247,168 @@
         </nav>
     </header>
     <main>
-        <section class="add-service container">
-            <div class="container-fluid">
+        <section class="add-service">
+            <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-11 col-sm-9 col-md-7 col-lg-7  text-center p-0 mb-2">
-                        <div>
-                            <form id="msform">
-                                <!-- progressbar -->
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-striped progress-bar-animated"
-                                        role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                        <form id="msform">
+                            <!-- progressbar -->
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                                    aria-valuemin="0" aria-valuemax="100">
+                                </div>
+                            </div>
+                            <br>
+                            <!-- wizard step -->
+                            <fieldset>
+                                <div class="form-card">
+                                    <div class="input-field">
+                                        <label for="service-name">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span>عنوان الخدمة</span>
+                                                <i class="info-label fa-light fa-circle-info" data-bs-toggle="tooltip"
+                                                    data-bs-placement="bottom" data-bs-title="اختر عنوانًا مختصرًا وواضحًا يعكس ما ستقدمه بالتحديد في خدمتك، ليتمكن المشترين من العثور عليها عند البحث بكلمات ذات صلة بمجال الخدمة."></i>
+                                            </div>
+                                        </label>
+                                        <input type="text" id="service-name" name="service-name"
+                                            placeholder="مثال : تصميم وبرمجة مواقع">
+                                    </div>
+                                    <div class="input-field">
+                                        <label for="service-main-type">التصنيف</label>
+                                        <div class="selcet-wrap">
+                                            <select class="form-select form-select-lg mb-3" id="service-main-type">
+                                                <option selected>اختر</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="input-field">
+                                        <label for="service-secondary-type">التصنيف الفرعي</label>
+                                        <div class="selcet-wrap">
+                                            <select class="form-select form-select-lg mb-3" id="service-secondary-type">
+                                                <option selected>اختر</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="input-field">
+                                        <label for="service-description">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span>وصف الخدمة</span>
+                                                <i class="info-label fa-light fa-circle-info" data-bs-toggle="tooltip"
+                                                    data-bs-placement="bottom" data-bs-title="اكتب وصفًا مميزًا للخدمة بلغة سليمة خالية من الأخطاء، تشرح خلاله ما سيحصل عليه العميل بالتفصيل عند شراء الخدمة."></i>
+                                            </div>
+                                        </label>
+                                        <textarea name="service-description" placeholder="اكتب هنا"></textarea>
                                     </div>
                                 </div>
-                                <br>
-                                <!-- wizard step -->
-                                <fieldset>
-                                    <div class="form-card">
-                                        <div class="input-field">
-                                            <label for="service-name">
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <span>عنوان الخدمة</span>
-                                                    <i class="info-label fa-light fa-circle-info"></i>
-                                                </div>
-                                            </label>
-                                            <input type="text" id="service-name" name="service-name"
-                                                placeholder="مثال : تصميم وبرمجة مواقع">
-                                        </div>
-                                        <div class="input-field">
-                                            <label for="service-main-type">التصنيف</label>
-                                            <div class="selcet-wrap">
-                                                <select class="form-select form-select-lg mb-3" id="service-main-type">
-                                                    <option selected>اختر</option>
-                                                    <option value="1">One</option>
-                                                    <option value="2">Two</option>
-                                                    <option value="3">Three</option>
-                                                </select>
+                                <input type="button" name="next" class="next action-button" value="التالي" />
+                            </fieldset>
+                            <!-- wizard step -->
+                            <fieldset>
+                                <div class="form-card">
+                                    <div class="input-field">
+                                        <label for="info-for-customer">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span>معرض الخدمة</span>
+                                                <i class="info-label fa-light fa-circle-info" data-bs-toggle="tooltip"
+                                                    data-bs-placement="bottom" data-bs-title="أضف صورة معبرة عن الخدمة بالإضافة إلى ثلاثة نماذج حصرية على الأقل تعرّف المشتري من خلالها على أسلوبك في العمل ومهاراتك."></i>
                                             </div>
-                                        </div>
-                                        <div class="input-field">
-                                            <label for="service-secondary-type">التصنيف الفرعي</label>
-                                            <div class="selcet-wrap">
-                                                <select class="form-select form-select-lg mb-3"
-                                                    id="service-secondary-type">
-                                                    <option selected>اختر</option>
-                                                    <option value="1">One</option>
-                                                    <option value="2">Two</option>
-                                                    <option value="3">Three</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="input-field">
-                                            <label for="service-description">
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <span>وصف الخدمة</span>
-                                                    <i class="info-label fa-light fa-circle-info"></i>
-                                                </div>
-                                            </label>
-                                            <textarea name="service-description" placeholder="اكتب هنا"></textarea>
+                                            <small>القياس: 343x257 بكسل . بنسبة 4:3 . الحجم الأقصى: 5 ميجا. العدد
+                                                المسموح: 10 ملفات.</small>
+                                        </label>
+                                        <label class="img-upload">
+                                            <img src="assets/images/fileup1.svg" alt="icon">
+                                            <input name="front-id-img" id="img-upload-front" accept="image/*"
+                                                type="file">
+                                        </label>
+                                    </div>
+                                    <div class="input-field">
+                                        <label for="service-main-type">سعر الخدمة</label>
+                                        <div class="selcet-wrap">
+                                            <select class="form-select form-select-lg mb-3" id="service-main-type">
+                                                <option selected>5.00 $</option>
+                                                <option value="1">10.00 $</option>
+                                                <option value="2">20.00 $</option>
+                                                <option value="3">30.00 $</option>
+                                            </select>
                                         </div>
                                     </div>
-                                    <input type="button" name="next" class="next action-button" value="التالي" />
-                                </fieldset>
-                                <!-- wizard step -->
-                                <fieldset>
-                                    <div class="form-card">
-                                        <div class="input-field">
-                                            <label for="info-for-customer">
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <span>معرض الخدمة</span>
-                                                    <i class="info-label fa-light fa-circle-info"></i>
-                                                </div>
-                                                <small>القياس: 343x257 بكسل . بنسبة 4:3 . الحجم الأقصى: 5 ميجا. العدد
-                                                    المسموح: 10 ملفات.</small>
-                                            </label>
-                                            <label class="img-upload">
-                                                <img src="assets/images/fileup1.svg" alt="icon">
-                                                <input name="front-id-img" id="img-upload-front" accept="image/*"
-                                                    type="file">
-                                            </label>
-                                        </div>
-                                        <div class="input-field">
-                                            <label for="service-main-type">سعر الخدمة</label>
-                                            <div class="selcet-wrap">
-                                                <select class="form-select form-select-lg mb-3" id="service-main-type">
-                                                    <option selected>5.00 $</option>
-                                                    <option value="1">10.00 $</option>
-                                                    <option value="2">20.00 $</option>
-                                                    <option value="3">30.00 $</option>
-                                                </select>
+                                    <div class="input-field">
+                                        <label for="service-name">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span>مدة التسليم</span>
+                                                <i class="info-label fa-light fa-circle-info" data-bs-toggle="tooltip"
+                                                    data-bs-placement="bottom" data-bs-title="يحق للمشتري إلغاء الخدمة مباشرة بحال التأخر عن الموعد المحدد."></i>
                                             </div>
-                                        </div>
-                                        <div class="input-field">
-                                            <label for="service-name">
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <span>مدة التسليم</span>
-                                                    <i class="info-label fa-light fa-circle-info"></i>
-                                                </div>
-                                            </label>
-                                            <div class="selcet-wrap">
-                                                <select class="form-select form-select-lg mb-3" id="service-main-type">
-                                                    <option selected>اختر</option>
-                                                    <option value="1">One</option>
-                                                    <option value="2">Two</option>
-                                                    <option value="3">Three</option>
-                                                </select>
-                                            </div>
+                                        </label>
+                                        <div class="selcet-wrap">
+                                            <select class="form-select form-select-lg mb-3" id="service-main-type">
+                                                <option selected>اختر</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
                                         </div>
                                     </div>
-                                    <input type="button" name="next" class="next action-button" value="التالي" />
-                                    <input type="button" name="previous" class="previous action-button-previous"
-                                        value="السابق" />
-                                </fieldset>
-                                <!-- wizard step -->
-                                <fieldset>
-                                    <div class="form-card">
-                                        <div class="input-field">
-                                            <label for="info-for-customer">
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <span>تعليمات للمشتري</span>
-                                                    <i class="info-label fa-light fa-circle-info"></i>
-                                                </div>
-                                            </label>
-                                            <textarea name="info-for-customer" id="info-for-customer"
-                                                placeholder="اكتب هنا"></textarea>
-                                        </div>
-                                        <div class="input-field">
-                                            <label for="add-more-devlop">
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <span>أضف تطويراً لهذه الخدمة</span>
-                                                    <i class="info-label fa-light fa-circle-info"></i>
-                                                </div>
-                                            </label>
-                                            <input id="addBtn" type="button" value="أضف تطويراً لهذه الخدمة">
-                                        </div>
-                                        <div id="add-cards-container"></div>
+                                </div>
+                                <input type="button" name="next" class="next action-button" value="التالي" />
+                                <input type="button" name="previous" class="previous action-button-previous"
+                                    value="السابق" />
+                            </fieldset>
+                            <!-- wizard step -->
+                            <fieldset>
+                                <div class="form-card">
+                                    <div class="input-field">
+                                        <label for="info-for-customer">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span>تعليمات للمشتري</span>
+                                                <i class="info-label fa-light fa-circle-info" data-bs-toggle="tooltip"
+                                                    data-bs-placement="bottom" data-bs-title="المعلومات التي تحتاجها من المشتري لتنفيذ الخدمة. تظهر هذه المعلومات بعد شراء الخدمة فقط."></i>
+                                            </div>
+                                        </label>
+                                        <textarea name="info-for-customer" id="info-for-customer"
+                                            placeholder="اكتب هنا"></textarea>
                                     </div>
-                                    <input type="button" name="next" class="next action-button" value="تأكيد واضافة" />
-                                    <input type="button" name="previous" class="previous action-button-previous"
-                                        value="السابق" />
-                                </fieldset>
-                                <!-- wizard finish step -->
-                                <fieldset>
-                                    <div class="form-card">
-                                        <div class="row justify-content-center">
-                                            <div class="col-12">
-                                                <img src="assets/images/success.svg" class="fit-image">
+                                    <div class="input-field">
+                                        <label for="add-more-devlop">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span>أضف تطويراً لهذه الخدمة</span>
+                                                <i class="info-label fa-light fa-circle-info" data-bs-toggle="tooltip"
+                                                    data-bs-placement="bottom" data-bs-title="تطويرات الخدمة المقدمة اختيارية فقط ولا يمكن أن تجبر المشتري على طلبها"></i>
                                             </div>
-                                        </div>
-                                        <div class="row justify-content-center">
-                                            <div class="col-10 text-center">
-                                                <h5 class="purple-text text-center">
-                                                    تم ارسال الخدمة بنجاح وجاري مراجعتها حالياً
-                                                </h5>
-                                                <a href="profile.html">حسابي <i class="fa-solid fa-angle-left"></i></a>
-                                            </div>
+                                        </label>
+                                        <input id="addBtn" type="button" value="أضف تطويراً لهذه الخدمة">
+                                    </div>
+                                    <div id="add-cards-container"></div>
+                                </div>
+                                <input type="button" name="next" class="next action-button" value="تأكيد واضافة" />
+                                <input type="button" name="previous" class="previous action-button-previous"
+                                    value="السابق" />
+                            </fieldset>
+                            <!-- wizard finish step -->
+                            <fieldset>
+                                <div class="form-card">
+                                    <div class="row justify-content-center">
+                                        <div class="col-12">
+                                            <img src="assets/images/success.svg" class="fit-image">
                                         </div>
                                     </div>
-                                </fieldset>
-                            </form>
-                        </div>
+                                    <div class="row justify-content-center">
+                                        <div class="col-10 text-center">
+                                            <h5 class="purple-text text-center">
+                                                تم ارسال الخدمة بنجاح وجاري مراجعتها حالياً
+                                            </h5>
+                                            <a href="profile.html">حسابي <i class="fa-solid fa-angle-left"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
                     </div>
                 </div>
             </div>

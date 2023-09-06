@@ -32,7 +32,7 @@
   --input-bg: #fafafa;
   --input-hint: #aaaaaa;
   --id-confirm: #eef6fc;
-  --main-transation: all .5s ease-in-out;
+  --main-transation: all 0.5s ease-in-out;
 }
 
 .dark-theme {
@@ -50,6 +50,9 @@
   --LightGray: #171717;
   --id-confirm: #171717;
   --light-bg: #171717;
+}
+.dark-theme * {
+  color: #bdbdbd;
 }
 
 ::-webkit-scrollbar {
@@ -497,60 +500,60 @@ main {
 main.main {
   padding: 0;
 }
-main .home .row-head {
+main .row-head {
   display: flex;
   align-items: center;
   width: 100%;
   margin-bottom: 40px;
   justify-content: space-between;
 }
-main .home .row-head h6 {
+main .row-head h6 {
   color: var(--black-color);
 }
-main .home .row-head a {
+main .row-head a {
   color: var(--black-color);
   display: flex;
   align-items: center;
   gap: 4px;
 }
-main .home .hero_section {
+main .hero_section {
   height: calc(100vh - 80px);
   position: relative;
   isolation: isolate;
 }
-main .home .hero_section .swiperControl .swiper-button-next {
+main .hero_section .swiperControl .swiper-button-next {
   z-index: 2;
   left: initial !important;
   right: 10px !important;
   top: 62%;
 }
-main .home .hero_section .swiperControl .swiper-button-next::after {
+main .hero_section .swiperControl .swiper-button-next::after {
   font-family: "Font Awesome 6 Pro";
   content: "\f175";
   font-size: 14px;
   color: #fff;
   transition: all 0.3s ease-in-out;
 }
-main .home .hero_section .swiperControl .swiper-button-next:hover::after {
+main .hero_section .swiperControl .swiper-button-next:hover::after {
   transform: scale(1.25);
 }
-main .home .hero_section .swiperControl .swiper-button-prev {
+main .hero_section .swiperControl .swiper-button-prev {
   z-index: 2;
   right: 11px;
   left: auto;
   top: 38%;
 }
-main .home .hero_section .swiperControl .swiper-button-prev::after {
+main .hero_section .swiperControl .swiper-button-prev::after {
   font-family: "Font Awesome 6 Pro";
   content: "\f176";
   font-size: 14px;
   color: #fff;
   transition: all 0.3s ease-in-out;
 }
-main .home .hero_section .swiperControl .swiper-button-prev:hover::after {
+main .hero_section .swiperControl .swiper-button-prev:hover::after {
   transform: scale(1.25);
 }
-main .home .hero_section .swiperControl .swiper-pagination {
+main .hero_section .swiperControl .swiper-pagination {
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -559,7 +562,7 @@ main .home .hero_section .swiperControl .swiper-pagination {
   width: 27px;
   right: 10px;
 }
-main .home .hero_section .swiperControl .swiper-pagination .swiper-pagination-bullet {
+main .hero_section .swiperControl .swiper-pagination .swiper-pagination-bullet {
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -567,7 +570,7 @@ main .home .hero_section .swiperControl .swiper-pagination .swiper-pagination-bu
   transition: 0.25s ease-in-out;
 }
 @media (max-width: 576px) {
-  main .home .hero_section .swiperControl {
+  main .hero_section .swiperControl {
     position: absolute;
     bottom: 0;
     transform: translateX(-50%) rotate(0deg);
@@ -576,7 +579,7 @@ main .home .hero_section .swiperControl .swiper-pagination .swiper-pagination-bu
     width: 100%;
     height: 100px;
   }
-  main .home .hero_section .swiperControl .swiper-pagination {
+  main .hero_section .swiperControl .swiper-pagination {
     z-index: 2;
     display: flex;
     flex-direction: column;
@@ -587,20 +590,20 @@ main .home .hero_section .swiperControl .swiper-pagination .swiper-pagination-bu
     transform: rotate(90deg);
     top: 31px;
   }
-  main .home .hero_section .swiperControl .swiper-button-prev {
+  main .hero_section .swiperControl .swiper-button-prev {
     z-index: 2;
     right: 32%;
     left: auto;
     transform: rotate(90deg);
     top: 69%;
   }
-  main .home .hero_section .swiperControl .swiper-button-next {
+  main .hero_section .swiperControl .swiper-button-next {
     right: 68% !important;
     transform: rotate(90deg);
     top: 69%;
   }
 }
-main .home .hero_section .hero_content {
+main .hero_section .hero_content {
   position: absolute;
   left: 0;
   width: 100%;
@@ -615,36 +618,36 @@ main .home .hero_section .hero_content {
   z-index: 1;
 }
 @media (max-width: 576px) {
-  main .home .hero_section .hero_content {
+  main .hero_section .hero_content {
     padding: 60px 18px;
   }
 }
-main .home .hero_section .hero_content h1 {
+main .hero_section .hero_content h1 {
   color: #fff;
   font-size: 36px;
   text-align: center;
   line-height: 58px;
 }
 @media (max-width: 576px) {
-  main .home .hero_section .hero_content h1 {
+  main .hero_section .hero_content h1 {
     font-size: 28px;
     line-height: 42px;
   }
 }
-main .home .hero_section .hero_content p {
+main .hero_section .hero_content p {
   color: #fff;
   text-align: center;
 }
 @media (max-width: 576px) {
-  main .home .hero_section .hero_content p {
+  main .hero_section .hero_content p {
     font-size: 14px;
   }
 }
-main .home .hero_section .hero_content form {
+main .hero_section .hero_content form {
   margin-top: 24px;
   width: min(100%, 600px);
 }
-main .home .hero_section .hero_content form .input-fileld {
+main .hero_section .hero_content form .input-fileld {
   background: #fff;
   padding: 16px;
   border-radius: 8px;
@@ -654,10 +657,10 @@ main .home .hero_section .hero_content form .input-fileld {
   margin: 0 auto;
   width: 100%;
 }
-main .home .hero_section .hero_content form .input-fileld i {
+main .hero_section .hero_content form .input-fileld i {
   color: #000;
 }
-main .home .hero_section .hero_content form .input-fileld input {
+main .hero_section .hero_content form .input-fileld input {
   border: none;
   background: none;
   outline: none;
@@ -665,7 +668,7 @@ main .home .hero_section .hero_content form .input-fileld input {
   font-size: 14px;
   color: #0d0d0d;
 }
-main .home .hero_section .hero_content form .input-fileld button {
+main .hero_section .hero_content form .input-fileld button {
   padding: 8px 24px;
   border-radius: 4px;
   color: #fff;
@@ -675,25 +678,25 @@ main .home .hero_section .hero_content form .input-fileld button {
   background-color: var(--main-color);
 }
 @media (max-width: 576px) {
-  main .home .hero_section .hero_content form .input-fileld button {
+  main .hero_section .hero_content form .input-fileld button {
     padding: 6px 16px;
     font-size: 14px;
   }
 }
-main .home .hero_section .hero_content .popular {
+main .hero_section .hero_content .popular {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-main .home .hero_section .hero_content .popular span {
+main .hero_section .hero_content .popular span {
   text-align: center;
   color: #fff;
 }
-main .home .hero_section .hero_content .popular ul {
+main .hero_section .hero_content .popular ul {
   display: flex;
   gap: 16px;
 }
-main .home .hero_section .hero_content .popular ul a {
+main .hero_section .hero_content .popular ul a {
   background-color: rgba(255, 255, 255, 0.2);
   color: #ffffff;
   display: inline-block;
@@ -704,36 +707,36 @@ main .home .hero_section .hero_content .popular ul a {
   padding: 5px 24px;
   border-radius: 60px;
 }
-main .home .hero_section .swiper {
+main .hero_section .swiper {
   width: 100%;
   height: 100%;
 }
-main .home .hero_section .swiper .swiper-slide .img img {
+main .hero_section .swiper .swiper-slide .img img {
   display: block;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-main .home .categories {
+main .categories {
   padding: 40px 16px;
 }
-main .home .categories .swiper {
+main .categories .swiper {
   width: 100%;
 }
-main .home .popular_departments {
+main .popular_departments {
   padding: 60px 0;
 }
-main .home .popular_departments .row-head {
+main .popular_departments .row-head {
   padding: 0 12px;
 }
-main .home .popular_departments .title {
+main .popular_departments .title {
   text-align: center;
   font-size: 26px;
   margin-bottom: 10px;
   color: var(--black-color);
 }
-main .home .popular_departments .sub-title {
+main .popular_departments .sub-title {
   text-align: center;
   font-size: 14px;
   color: var(--black-color);
@@ -4051,4 +4054,13 @@ body.dark-theme main .about-section .about_wrap .testmonials .swiper .swiper-sli
 }
 .category-card .inner-card:hover .category-img img {
   transform: scale(1.15) rotate(-1deg);
+}
+
+.tooltip {
+  --bs-tooltip-bg: #242424;
+}
+.tooltip .tooltip-inner {
+  font-size: 10px;
+  padding: 8px 16px !important;
+  line-height: 20px;
 }/*# sourceMappingURL=style.css.map */

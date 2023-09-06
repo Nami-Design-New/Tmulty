@@ -11,7 +11,7 @@ if (!localStorage.getItem("theme")) {
 function toggleTheme(theme) {
   if (theme === "light") {
     body.classList.remove("dark-theme");
-    brand.forEach(b => {
+    brand.forEach((b) => {
       b.src = "assets/images/logo.svg";
     });
     document.querySelector(".illustration img").src =
@@ -21,7 +21,7 @@ function toggleTheme(theme) {
       "assets/images/newpass1.svg";
   } else if (theme === "dark") {
     body.classList.add("dark-theme");
-    brand.forEach(b => {
+    brand.forEach((b) => {
       b.src = "assets/images/logo-dark.svg";
     });
     document.querySelector(".illustration img").src =
@@ -46,8 +46,8 @@ window.addEventListener("load", () => {
   toggleTheme(savedTheme);
 });
 // text trim
-$(document).ready(function() {
-  $(".service-card h6").each(function() {
+$(document).ready(function () {
+  $(".service-card h6").each(function () {
     var text = $(this).text();
     if (text.length > 70) {
       var truncatedText =
@@ -63,12 +63,12 @@ var swiper = new Swiper(".heroSwiper", {
   speed: 1000,
   pagination: {
     el: ".mainSliderPagination",
-    clickable: true
+    clickable: true,
   },
   navigation: {
     nextEl: ".mainSliderNext",
-    prevEl: ".mainSliderPrev"
-  }
+    prevEl: ".mainSliderPrev",
+  },
 });
 //services swiper
 var categoriesSwiper = new Swiper(".categories-swiper", {
@@ -76,19 +76,19 @@ var categoriesSwiper = new Swiper(".categories-swiper", {
   spaceBetween: 30,
   speed: 2000,
   autoplay: {
-    delay: 2500
+    delay: 2500,
   },
   breakpoints: {
     992: {
-      slidesPerView: 4
+      slidesPerView: 4,
     },
     768: {
-      slidesPerView: 3
+      slidesPerView: 3,
     },
     350: {
-      slidesPerView: 1
-    }
-  }
+      slidesPerView: 1,
+    },
+  },
 });
 // testimonials slider
 var swiper = new Swiper(".testimonilas", {
@@ -98,22 +98,22 @@ var swiper = new Swiper(".testimonilas", {
   centeredSlides: true,
   pagination: {
     el: ".testimonialsSwiperPagination",
-    clickable: true
+    clickable: true,
   },
   autoplay: {
-    delay: 2500
+    delay: 2500,
   },
   breakpoints: {
     992: {
-      slidesPerView: 3
+      slidesPerView: 3,
     },
     768: {
-      slidesPerView: 2
+      slidesPerView: 2,
     },
     350: {
-      slidesPerView: 1
-    }
-  }
+      slidesPerView: 1,
+    },
+  },
 });
 let toggler = document.querySelector(".toogler");
 let menu = document.querySelector(".small-media-menu");
@@ -125,19 +125,26 @@ toggler.addEventListener("click", () => {
     toggler.classList.remove("close");
   }
 });
-$(document).ready(function() {
+$(document).ready(function () {
+  //aos Delay
+  $("section").each(function () {
+    const sectionDivs = $(this).find("[data-aos]");
+    sectionDivs.each(function (index) {
+      $(this).attr("data-aos-delay", (index + 1) * 100);
+    });
+  });
   // aos
   AOS.init({
     offset: 20,
     delay: 50,
     duration: 750,
-    once: true
+    once: true,
   });
+  // tooltip
+  const tooltipTriggerList = document.querySelectorAll(
+    '[data-bs-toggle="tooltip"]'
+  );
+  const tooltipList = [...tooltipTriggerList].map(
+    (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+  );
 });
-// tooltip
-const tooltipTriggerList = document.querySelectorAll(
-  '[data-bs-toggle="tooltip"]'
-);
-const tooltipList = [...tooltipTriggerList].map(
-  tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl)
-);
