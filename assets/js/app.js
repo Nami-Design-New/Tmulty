@@ -106,3 +106,13 @@ toggler.addEventListener("click", () => {
     toggler.classList.remove("close");
   }
 });
+$(document).ready(function () {
+  // aos
+  AOS.init({
+      offset: 20,
+      delay: 50,
+      duration: 300,
+      easing: "linear",
+      once: true
+  });
+});

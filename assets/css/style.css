@@ -149,8 +149,8 @@ header .tnavbar {
 }
 header .tnavbar .small-media-menu {
   width: 100%;
+  height: calc(100vh - 80px);
   background: var(--white-color);
-  height: 0;
   overflow: hidden;
   position: fixed;
   right: -100%;
@@ -203,7 +203,6 @@ header .tnavbar .small-media-menu .nav-links li a {
 }
 header .tnavbar .small-media-menu.show {
   right: 0;
-  height: calc(100vh - 80px);
 }
 header .tnavbar .toogler {
   display: none;
@@ -567,6 +566,40 @@ main .home .hero_section .swiperControl .swiper-pagination .swiper-pagination-bu
   background: #fff;
   transition: 0.25s ease-in-out;
 }
+@media (max-width: 576px) {
+  main .home .hero_section .swiperControl {
+    position: absolute;
+    bottom: 0;
+    transform: translateX(-50%) rotate(0deg);
+    left: 50%;
+    z-index: 99;
+    width: 100%;
+    height: 100px;
+  }
+  main .home .hero_section .swiperControl .swiper-pagination {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 27px;
+    right: 50%;
+    transform: rotate(90deg);
+    top: 31px;
+  }
+  main .home .hero_section .swiperControl .swiper-button-prev {
+    z-index: 2;
+    right: 32%;
+    left: auto;
+    transform: rotate(90deg);
+    top: 69%;
+  }
+  main .home .hero_section .swiperControl .swiper-button-next {
+    right: 68% !important;
+    transform: rotate(90deg);
+    top: 69%;
+  }
+}
 main .home .hero_section .hero_content {
   position: absolute;
   left: 0;
@@ -583,7 +616,7 @@ main .home .hero_section .hero_content {
 }
 @media (max-width: 576px) {
   main .home .hero_section .hero_content {
-    padding: 60px 30px;
+    padding: 60px 18px;
   }
 }
 main .home .hero_section .hero_content h1 {
@@ -609,6 +642,7 @@ main .home .hero_section .hero_content p {
 }
 main .home .hero_section .hero_content form {
   margin-top: 24px;
+  width: min(100%, 600px);
 }
 main .home .hero_section .hero_content form .input-fileld {
   background: #fff;
@@ -617,6 +651,8 @@ main .home .hero_section .hero_content form .input-fileld {
   display: flex;
   align-items: center;
   gap: 12px;
+  margin: 0 auto;
+  width: 100%;
 }
 main .home .hero_section .hero_content form .input-fileld i {
   color: #000;
@@ -625,14 +661,9 @@ main .home .hero_section .hero_content form .input-fileld input {
   border: none;
   background: none;
   outline: none;
-  width: 400px;
+  width: 100%;
   font-size: 14px;
   color: #0d0d0d;
-}
-@media (max-width: 576px) {
-  main .home .hero_section .hero_content form .input-fileld input {
-    width: 210px;
-  }
 }
 main .home .hero_section .hero_content form .input-fileld button {
   padding: 8px 24px;
@@ -642,6 +673,12 @@ main .home .hero_section .hero_content form .input-fileld button {
   background: none;
   outline: none;
   background-color: var(--main-color);
+}
+@media (max-width: 576px) {
+  main .home .hero_section .hero_content form .input-fileld button {
+    padding: 6px 16px;
+    font-size: 14px;
+  }
 }
 main .home .hero_section .hero_content .popular {
   display: flex;
@@ -1143,8 +1180,6 @@ main .profile-section .profile-descripe .cash .row {
 }
 main .profile-section .profile-descripe .cash .cash-info {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
   gap: 4px;
 }
@@ -1152,6 +1187,11 @@ main .profile-section .profile-descripe .cash .cash-info span {
   font-size: 14px;
   color: var(--black-color);
   font-weight: 600;
+}
+@media (max-width: 576px) {
+  main .profile-section .profile-descripe .cash .cash-info span {
+    font-size: 12px;
+  }
 }
 main .profile-section .profile-descripe .cash .cash-info h6 {
   color: var(--main-color);
@@ -1161,9 +1201,17 @@ main .profile-section .profile-descripe .cash .cash-info h6 {
 main .profile-section .profile-descripe .cash .cash-info h6 i {
   color: var(--text-color);
 }
+@media (max-width: 576px) {
+  main .profile-section .profile-descripe .cash .cash-info h6 {
+    font-size: 16px;
+  }
+}
 main .profile-section .profile-taps .nav-pills {
   justify-content: space-between;
-  padding: 0 24px 24px;
+  padding: 24px 24px;
+  background: var(--input-bg);
+  margin-bottom: 24px;
+  border-radius: 8px;
 }
 main .profile-section .profile-taps .nav-pills .nav-link {
   color: var(--text-color);
@@ -1195,9 +1243,6 @@ main .profile-section .profile-taps .nav-pills .nav-link:hover, main .profile-se
 main .profile-section .profile-taps .nav-pills .nav-link:hover::after, main .profile-section .profile-taps .nav-pills .nav-link.active::after {
   width: 100%;
   opacity: 1;
-}
-main .profile-section .profile-taps .tab-content {
-  padding: 0 24px;
 }
 main .profile-section .profile-taps .tab-content .statics-list {
   display: flex;
@@ -1277,7 +1322,7 @@ main .profile-section .profile-taps .tab-content .services-contianer .add-servic
 }
 main .profile-section .profile-taps .nav-pills .nav-link.active,
 main .profile-section .profile-taps .nav-pills .show > .nav-link {
-  background: none;
+  background: none !important;
   color: var(--main-color);
 }
 main .profile-section .profile-taps .nav-pills .nav-link.active::after,
@@ -1716,12 +1761,11 @@ main .chat-section .nav {
     background: var(--white-color);
     left: -100%;
     transition: var(--main-transation);
-    height: 0;
+    height: calc(100vh - 80px);
     padding: 32px 24px;
   }
   main .chat-section .nav.active {
     left: 0;
-    height: calc(100vh - 80px);
   }
 }
 main .chat-section .nav .nav-link {
@@ -2197,12 +2241,11 @@ main .cart-section .filter .colse {
     background: var(--white-color);
     left: -100%;
     transition: var(--main-transation);
-    height: 0;
+    height: calc(100vh - 80px);
     padding: 32px 24px;
   }
   main .cart-section .filter.active {
     left: 0;
-    height: calc(100vh - 80px);
   }
 }
 main .cart-section .filter h6 {
@@ -2549,12 +2592,11 @@ main .search-section .filter-wrap form .seller-level ul li {
     background: var(--white-color);
     left: -100%;
     transition: var(--main-transation);
-    height: 0;
+    height: calc(100vh - 80px);
     padding: 32px 24px;
   }
   main .search-section aside.active {
     left: 0;
-    height: calc(100vh - 80px);
   }
 }
 main .contact-section {
@@ -3801,6 +3843,12 @@ input[type=checkbox]:checked::after {
   margin-bottom: 12px;
   color: var(--black-color);
 }
+@media (max-width: 576px) {
+  .service-card .content h6 {
+    font-size: 12px;
+    line-height: 22px;
+  }
+}
 .service-card .content p {
   font-size: 14px;
   color: var(--text-color);
@@ -3808,10 +3856,20 @@ input[type=checkbox]:checked::after {
 .service-card .content p a {
   color: var(--text-color);
 }
+@media (max-width: 576px) {
+  .service-card .content p {
+    font-size: 10px;
+  }
+}
 .service-card .content .sell-count {
   font-size: 18px;
   color: var(--black-color);
   font-weight: 600;
+}
+@media (max-width: 576px) {
+  .service-card .content .sell-count {
+    font-size: 14px;
+  }
 }
 .service-card .content .start-from {
   color: var(--black-color);
