@@ -581,6 +581,11 @@ main .home .hero_section .hero_content {
   padding: 60px;
   z-index: 1;
 }
+@media (max-width: 576px) {
+  main .home .hero_section .hero_content {
+    padding: 60px 30px;
+  }
+}
 main .home .hero_section .hero_content h1 {
   color: #fff;
   font-size: 36px;
@@ -626,7 +631,7 @@ main .home .hero_section .hero_content form .input-fileld input {
 }
 @media (max-width: 576px) {
   main .home .hero_section .hero_content form .input-fileld input {
-    width: 250px;
+    width: 210px;
   }
 }
 main .home .hero_section .hero_content form .input-fileld button {
