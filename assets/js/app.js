@@ -3,29 +3,49 @@ let lightThemeBtn = document.getElementById("lightTheme");
 let darkThemeBtn = document.getElementById("darkTheme");
 let body = document.querySelector("body");
 let brand = document.querySelectorAll(".brand");
-let nami = document.querySelector("#nami");
+// Define the theme flag
+if (!localStorage.getItem("theme")) {
+  localStorage.setItem("theme", "light");
+}
+// Function to toggle the theme
+function toggleTheme(theme) {
+  if (theme === "light") {
+    body.classList.remove("dark-theme");
+    brand.forEach(b => {
+      b.src = "assets/images/logo.svg";
+    });
+    document.querySelector(".illustration img").src =
+      "assets/images/forgetpass1.svg";
+    document.querySelector(".otp img").src = "assets/images/otp1.svg";
+    document.querySelector(".confirmpass img").src =
+      "assets/images/newpass1.svg";
+  } else if (theme === "dark") {
+    body.classList.add("dark-theme");
+    brand.forEach(b => {
+      b.src = "assets/images/logo-dark.svg";
+    });
+    document.querySelector(".illustration img").src =
+      "assets/images/forgetpass2.svg";
+    document.querySelector(".otp img").src = "assets/images/otp2.svg";
+    document.querySelector(".confirmpass img").src =
+      "assets/images/newpass2.svg";
+  }
+}
+// Event listeners for theme buttons
 lightThemeBtn.addEventListener("click", () => {
-  body.classList.remove("dark-theme");
-  brand.forEach(b => {
-    b.src = "assets/images/logo.svg";
-  });
-  nami.src = "assets/images/nami.svg";
-  document.querySelector(".illustration img").src =
-    "assets/images/forgetpass1.svg";
-  document.querySelector(".otp img").src = "assets/images/otp1.svg";
-  document.querySelector(".confirmpass img").src = "assets/images/newpass1.svg";
+  localStorage.setItem("theme", "light");
+  toggleTheme("light");
 });
 darkThemeBtn.addEventListener("click", () => {
-  body.classList.add("dark-theme");
-  brand.forEach(b => {
-    b.src = "assets/images/logo-dark.svg";
-  });
-  nami.src = "assets/images/nami2.svg";
-  document.querySelector(".illustration img").src =
-    "assets/images/forgetpass2.svg";
-  document.querySelector(".otp img").src = "assets/images/otp2.svg";
-  document.querySelector(".confirmpass img").src = "assets/images/newpass2.svg";
+  localStorage.setItem("theme", "dark");
+  toggleTheme("dark");
 });
+// Apply the theme on page load
+window.addEventListener("load", () => {
+  const savedTheme = localStorage.getItem("theme");
+  toggleTheme(savedTheme);
+});
+// text trim
 $(document).ready(function() {
   $(".service-card h6").each(function() {
     var text = $(this).text();
@@ -55,7 +75,6 @@ var categoriesSwiper = new Swiper(".categories-swiper", {
   loop: true,
   spaceBetween: 30,
   speed: 2000,
-  centeredSlides: true,
   autoplay: {
     delay: 2500
   },
@@ -64,10 +83,10 @@ var categoriesSwiper = new Swiper(".categories-swiper", {
       slidesPerView: 4
     },
     768: {
-      slidesPerView: 3.5
+      slidesPerView: 3
     },
     350: {
-      slidesPerView: 1.5
+      slidesPerView: 1
     }
   }
 });
@@ -106,13 +125,19 @@ toggler.addEventListener("click", () => {
     toggler.classList.remove("close");
   }
 });
-$(document).ready(function () {
+$(document).ready(function() {
   // aos
   AOS.init({
-      offset: 20,
-      delay: 50,
-      duration: 300,
-      easing: "linear",
-      once: true
+    offset: 20,
+    delay: 50,
+    duration: 750,
+    once: true
   });
 });
+// tooltip
+const tooltipTriggerList = document.querySelectorAll(
+  '[data-bs-toggle="tooltip"]'
+);
+const tooltipList = [...tooltipTriggerList].map(
+  tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl)
+);
