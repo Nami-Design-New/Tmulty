@@ -86,7 +86,7 @@ var categoriesSwiper = new Swiper(".categories-swiper", {
       slidesPerView: 3,
     },
     350: {
-      slidesPerView: 1,
+      slidesPerView: 2,
     },
   },
 });

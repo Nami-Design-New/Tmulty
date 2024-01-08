@@ -204,6 +204,13 @@ header .tnavbar .small-media-menu .nav-links li a {
   gap: 8px;
   font-size: 14px;
 }
+header .tnavbar .small-media-menu .nav-links li a i {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 header .tnavbar .small-media-menu.show {
   right: 0;
 }
@@ -496,6 +503,7 @@ header .tnavbar .loged-in-minor-menu .link .searchmenu input {
 
 main {
   padding: 40px 0;
+  min-height: calc(100vh - 489px);
 }
 main.main {
   padding: 0;
@@ -1647,6 +1655,7 @@ main .service-details .service-card {
   background: var(--input-bg);
   padding: 16px;
   margin-bottom: 24px;
+  height: auto;
 }
 main .service-details .service-card .label {
   padding: 8px;
@@ -3778,6 +3787,9 @@ input[type=checkbox]:checked::after {
   border-radius: 4px;
   background-color: var(--input-bg);
   overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .service-card:hover .img img {
   transform: scale(1.1) rotate(-1deg);
@@ -3788,12 +3800,17 @@ input[type=checkbox]:checked::after {
   display: block;
 }
 .service-card .img img {
-  max-width: 100%;
-  aspect-ratio: 1/0.65;
+  width: 100%;
+  aspect-ratio: 3/2;
   transition: var(--main-transation);
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .service-card .content {
   padding: 12px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 .service-card .content h6 {
   font-size: 14px;
@@ -3809,6 +3826,7 @@ input[type=checkbox]:checked::after {
 }
 .service-card .content p {
   font-size: 14px;
+  margin-bottom: auto;
   color: var(--text-color);
 }
 .service-card .content p a {
@@ -3934,7 +3952,13 @@ input[type=checkbox]:checked::after {
 }
 .section-head .text-wrap h1 {
   color: var(--main-color);
-  font-size: 30px;
+  font-size: 24px;
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  .section-head .text-wrap h1 {
+    font-size: 18px;
+  }
 }
 .section-head .text-wrap p {
   font-size: 14px;
@@ -4063,4 +4087,191 @@ body.dark-theme main .about-section .about_wrap .testmonials .swiper .swiper-sli
   font-size: 10px;
   padding: 8px 16px !important;
   line-height: 20px;
+}
+
+.allRequests {
+  padding: 80px 0;
+}
+.allRequests .allRequestsContainer {
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border-radius: 12px;
+  width: 100%;
+  gap: 12px;
+}
+@media (max-width: 768px) {
+  .allRequests .allRequestsContainer {
+    padding: 8px;
+  }
+}
+.allRequests .allRequestsContainer .singleRequst {
+  background-color: var(--white-color);
+  padding: 12px;
+  border-radius: 8px;
+  position: relative;
+}
+.allRequests .allRequestsContainer a {
+  color: var(--black-color);
+  transition: all 0.3s ease-in-out;
+}
+.allRequests .allRequestsContainer a:hover {
+  color: var(--main-color);
+}
+.allRequests .allRequestsContainer .requstPost,
+.allRequests .allRequestsContainer .lastInteraction {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+@media (max-width: 768px) {
+  .allRequests .allRequestsContainer .requstPost,
+  .allRequests .allRequestsContainer .lastInteraction {
+    align-items: start;
+  }
+}
+.allRequests .allRequestsContainer .requstPost img,
+.allRequests .allRequestsContainer .lastInteraction img {
+  width: 64px;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.allRequests .allRequestsContainer .requstPost .postContent,
+.allRequests .allRequestsContainer .lastInteraction .postContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.allRequests .allRequestsContainer .requstPost .postUser,
+.allRequests .allRequestsContainer .lastInteraction .postUser {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  row-gap: 2px;
+  flex-wrap: wrap;
+}
+.allRequests .allRequestsContainer .requstPost .postUser .time,
+.allRequests .allRequestsContainer .requstPost .postUser .name,
+.allRequests .allRequestsContainer .lastInteraction .postUser .time,
+.allRequests .allRequestsContainer .lastInteraction .postUser .name {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+.allRequests .allRequestsContainer .requstPost .postUser .time i,
+.allRequests .allRequestsContainer .requstPost .postUser .name i,
+.allRequests .allRequestsContainer .lastInteraction .postUser .time i,
+.allRequests .allRequestsContainer .lastInteraction .postUser .name i {
+  font-size: 12px;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.allRequests .allRequestsContainer .requstPost .postTitle,
+.allRequests .allRequestsContainer .lastInteraction .postTitle {
+  font-weight: bold;
+}
+.allRequests .allRequestsContainer .requstPost .status,
+.allRequests .allRequestsContainer .lastInteraction .status {
+  padding: 4px 12px 6px;
+  background-color: var(--main-color);
+  border-radius: 0 8px 0 8px;
+  font-size: 12px;
+  color: var(--white-color);
+  width: -moz-fit-content;
+  width: fit-content;
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: normal;
+}
+.allRequests .allRequestsContainer .requstPost .status.new,
+.allRequests .allRequestsContainer .lastInteraction .status.new {
+  background-color: #00af49;
+}
+.allRequests .allRequestsContainer .requstPost .lastUser,
+.allRequests .allRequestsContainer .lastInteraction .lastUser {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.allRequests .allRequestsContainer .requstPost .lastUser .name,
+.allRequests .allRequestsContainer .lastInteraction .lastUser .name {
+  font-size: 14px;
+}
+.allRequests .allRequestsContainer .requstPost .lastUser .time,
+.allRequests .allRequestsContainer .lastInteraction .lastUser .time {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+}
+.allRequests .allRequestsContainer .requstPost .lastUser .time i,
+.allRequests .allRequestsContainer .lastInteraction .lastUser .time i {
+  font-size: 12px;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .allRequests .allRequestsContainer .lastInteraction img {
+    width: 32px !important;
+  }
+  .allRequests .allRequestsContainer .lastInteraction .lastUser {
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+  }
+}
+
+.dark-theme .allRequests .allRequestsContainer {
+  background-color: #1f1f1f;
+}
+
+.addRequest {
+  padding: 40px 0;
+}
+.addRequest form {
+  width: min(100% - 32px, 650px);
+  margin: auto;
+  background-color: var(--input-bg);
+  padding: 12px;
+  border-radius: 12px;
+  border: var(--gray-background) 1px solid;
+}
+.addRequest .input-field {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 10px;
+}
+.addRequest .input-field label {
+  color: var(--black-color);
+}
+.addRequest .input-field label i {
+  color: var(--main-color);
+}
+.addRequest .input-field input,
+.addRequest .input-field textarea {
+  color: var(--black-color);
+  direction: rtl;
+  height: 56px;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: var(--white-color);
+  font-size: 14px;
+}
+.addRequest .input-field textarea {
+  height: 230px;
 }/*# sourceMappingURL=style.css.map */
