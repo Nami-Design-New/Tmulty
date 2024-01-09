@@ -71,7 +71,7 @@
 * {
   margin: 0;
   padding: 0;
-  direction: rtl;
+  direction: ltr;
   line-height: 28px;
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -156,7 +156,7 @@ header .tnavbar .small-media-menu {
   background: var(--white-color);
   overflow: hidden;
   position: fixed;
-  right: -100%;
+  left: -100%;
   top: 80px;
   transition: var(--main-transation);
   padding: 24px;
@@ -212,7 +212,7 @@ header .tnavbar .small-media-menu .nav-links li a i {
   justify-content: center;
 }
 header .tnavbar .small-media-menu.show {
-  right: 0;
+  left: 0;
 }
 header .tnavbar .toogler {
   display: none;
@@ -382,7 +382,7 @@ header .tnavbar .loged-in-minor-menu .link .dropdown-menu .line {
   background: var(--LightGray);
 }
 header .tnavbar .loged-in-minor-menu .link .dropdown-menu.show {
-  left: 0 !important;
+  right: 0 !important;
   top: 80px !important;
   transform: translate(0px, 0px) !important;
   border-radius: 0 !important;
@@ -471,23 +471,23 @@ header .tnavbar .loged-in-minor-menu .link .notifimenu li a {
   padding: 12px 16px !important;
 }
 header .tnavbar .loged-in-minor-menu .link .languagemenu.show {
-  left: 232px !important;
+  right: 232px !important;
 }
 @media (max-width: 576px) {
   header .tnavbar .loged-in-minor-menu .link .languagemenu.show {
-    left: 40px !important;
+    right: 40px !important;
   }
 }
 header .tnavbar .loged-in-minor-menu .link .thememenu.show {
-  left: 182px !important;
+  right: 182px !important;
 }
 @media (max-width: 576px) {
   header .tnavbar .loged-in-minor-menu .link .thememenu.show {
-    left: 12px !important;
+    right: 12px !important;
   }
 }
 header .tnavbar .loged-in-minor-menu .link .notifimenu.show {
-  left: 82px !important;
+  right: 82px !important;
 }
 header .tnavbar .loged-in-minor-menu .link .searchmenu {
   width: 100vw;
@@ -531,8 +531,8 @@ main .hero_section {
 }
 main .hero_section .swiperControl .swiper-button-next {
   z-index: 2;
-  left: initial !important;
-  right: 10px !important;
+  right: initial !important;
+  left: 10px !important;
   top: 62%;
 }
 main .hero_section .swiperControl .swiper-button-next::after {
@@ -547,8 +547,8 @@ main .hero_section .swiperControl .swiper-button-next:hover::after {
 }
 main .hero_section .swiperControl .swiper-button-prev {
   z-index: 2;
-  right: 11px;
-  left: auto;
+  left: 11px;
+  right: auto;
   top: 38%;
 }
 main .hero_section .swiperControl .swiper-button-prev::after {
@@ -568,7 +568,7 @@ main .hero_section .swiperControl .swiper-pagination {
   align-items: center;
   gap: 8px;
   width: 27px;
-  right: 10px;
+  left: 10px;
 }
 main .hero_section .swiperControl .swiper-pagination .swiper-pagination-bullet {
   width: 8px;
@@ -581,8 +581,8 @@ main .hero_section .swiperControl .swiper-pagination .swiper-pagination-bullet {
   main .hero_section .swiperControl {
     position: absolute;
     bottom: 0;
-    transform: translateX(-50%) rotate(0deg);
-    left: 50%;
+    transform: translateX(50%) rotate(0deg);
+    right: 50%;
     z-index: 99;
     width: 100%;
     height: 100px;
@@ -594,26 +594,26 @@ main .hero_section .swiperControl .swiper-pagination .swiper-pagination-bullet {
     align-items: center;
     gap: 8px;
     width: 27px;
-    right: 50%;
+    left: 50%;
     transform: rotate(90deg);
     top: 31px;
   }
   main .hero_section .swiperControl .swiper-button-prev {
     z-index: 2;
-    right: 32%;
-    left: auto;
+    left: 32%;
+    right: auto;
     transform: rotate(90deg);
     top: 69%;
   }
   main .hero_section .swiperControl .swiper-button-next {
-    right: 68% !important;
+    left: 68% !important;
     transform: rotate(90deg);
     top: 69%;
   }
 }
 main .hero_section .hero_content {
   position: absolute;
-  left: 0;
+  right: 0;
   width: 100%;
   height: 100%;
   display: flex;
@@ -711,7 +711,7 @@ main .hero_section .hero_content .popular ul a {
   font-weight: 400;
   font-size: 15px;
   line-height: 28px;
-  margin-right: 10px;
+  margin-left: 10px;
   padding: 5px 24px;
   border-radius: 60px;
 }
@@ -805,7 +805,7 @@ main .login-section .form .input-field label i {
 main .login-section .form .input-field input,
 main .login-section .form .input-field textarea {
   color: var(--black-color);
-  direction: rtl;
+  direction: ltr;
   height: 56px;
   width: 100%;
   border: none;
@@ -886,7 +886,7 @@ main .login-section .form .question .vendorInput::before {
   border-radius: 50%;
   position: absolute;
   top: 4px;
-  right: 4px;
+  left: 4px;
   content: "";
   background-color: var(--white-color);
 }
@@ -894,8 +894,8 @@ main .login-section .form .question .vendorInput:checked::after {
   background-color: var(--main-color);
 }
 main .login-section .form .question .vendorInput:checked::before {
-  right: initial;
-  left: 4px;
+  left: initial;
+  right: 4px;
 }
 main .login-section .form .image-change-wrapper {
   border-radius: 12px;
@@ -963,8 +963,8 @@ main .login-section .form .line {
 main .login-section .form .line span {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  right: 50%;
+  transform: translate(50%, -50%);
   background: var(--white-color);
   padding: 0 16px;
   color: var(--black-color);
@@ -1059,8 +1059,8 @@ main .profile-section .profile-descripe .banner {
 main .profile-section .profile-descripe .banner .user-avatar {
   position: absolute;
   bottom: -60px;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 50%;
+  transform: translateX(50%);
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -1077,7 +1077,7 @@ main .profile-section .profile-descripe .banner .user-avatar .status {
   display: block;
   position: absolute;
   bottom: 0;
-  left: 8px;
+  right: 8px;
   width: 20px;
   border-radius: 50%;
   height: 20px;
@@ -1193,8 +1193,8 @@ main .profile-section .profile-taps .nav-pills .nav-link {
 }
 main .profile-section .profile-taps .nav-pills .nav-link::after {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 50%;
+  transform: translateX(50%);
   bottom: 6px;
   width: 0;
   content: "";
@@ -1318,7 +1318,7 @@ main .service-details .service-content .swiper .swiper-slide .img video {
 }
 main .service-details .service-content .swiper .swiper-pagination-fraction {
   top: 12px !important;
-  left: 12px !important;
+  right: 12px !important;
   width: 100px !important;
   height: 30px !important;
   direction: ltr !important;
@@ -1358,7 +1358,7 @@ main .service-details .service-content .content .service-owner-card {
   position: absolute;
   top: -60px;
   padding: 10px;
-  right: 5%;
+  left: 5%;
   border-radius: 120px;
   z-index: 99;
 }
@@ -1492,8 +1492,8 @@ main .service-details .service-content .content .service-owner-card .btns .dropd
   padding: 4px 8px;
   margin: 0;
   bottom: -42px;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 50%;
+  transform: translateX(50%);
   transition: var(--main-transation);
   opacity: 0;
 }
@@ -1505,8 +1505,8 @@ main .service-details .service-content .content .service-owner-card .btns .dropd
   background: var(--input-bg);
   content: "";
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 50%;
+  transform: translateX(50%);
   top: -10px;
 }
 main .service-details .service-content .content .service-owner-card .btns .dropdown .dropdown-menu .social {
@@ -1541,7 +1541,7 @@ main .service-details .service-content .content .service-owner-card .btns .dropd
 @media (max-width: 576px) {
   main .service-details .service-content .content .service-owner-card {
     width: 95%;
-    right: 2.5%;
+    left: 2.5%;
     height: 100px;
     top: -50px;
   }
@@ -1726,13 +1726,13 @@ main .chat-section .nav {
     overflow-y: scroll;
     width: 100%;
     background: var(--white-color);
-    left: -100%;
+    right: -100%;
     transition: var(--main-transation);
     height: calc(100vh - 80px);
     padding: 32px 24px;
   }
   main .chat-section .nav.active {
-    left: 0;
+    right: 0;
   }
 }
 main .chat-section .nav .nav-link {
@@ -1872,7 +1872,7 @@ main .chat-section .chat-container .inner-container .message.sent-message .messa
   background: var(--input-bg);
   content: "";
   position: absolute;
-  left: -14px;
+  right: -14px;
   bottom: 0;
   -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 0);
           clip-path: polygon(0 100%, 100% 100%, 100% 0);
@@ -1883,7 +1883,7 @@ main .chat-section .chat-container .inner-container .message.recieved-message {
 main .chat-section .chat-container .inner-container .message.recieved-message .message-content {
   background: var(--main-color);
   padding: 10px 16px;
-  border-radius: 12px 12px 0 12px;
+  border-radius: 12px 12px 12px 0;
   color: #fff;
   position: relative;
 }
@@ -1893,7 +1893,7 @@ main .chat-section .chat-container .inner-container .message.recieved-message .m
   background: var(--main-color);
   content: "";
   position: absolute;
-  right: -14px;
+  left: -14px;
   bottom: 0;
   -webkit-clip-path: polygon(0 100%, 100% 100%, 0 0);
           clip-path: polygon(0 100%, 100% 100%, 0 0);
@@ -1952,8 +1952,7 @@ main .chat-section .chat-container .chat-send form button {
 main .chat-section .chat-container .chat-send form button i {
   font-size: 22px;
   color: #fff;
-  margin-right: 4px;
-  transform: scaleX(-1);
+  margin-left: 4px;
 }
 main .chat-section .openTaps {
   width: 96%;
@@ -2206,13 +2205,13 @@ main .cart-section .filter .colse {
     overflow-y: scroll;
     width: 100%;
     background: var(--white-color);
-    left: -100%;
+    right: -100%;
     transition: var(--main-transation);
     height: calc(100vh - 80px);
     padding: 32px 24px;
   }
   main .cart-section .filter.active {
-    left: 0;
+    right: 0;
   }
 }
 main .cart-section .filter h6 {
@@ -2256,7 +2255,7 @@ main .checkout-section form .label input {
   border-radius: 8px;
   z-index: -1;
   position: absolute;
-  left: 0;
+  right: 0;
   top: 0;
   width: 100%;
   -webkit-appearance: none;
@@ -2294,7 +2293,7 @@ main .checkout-section form .info-card .input-field label {
 }
 main .checkout-section form .info-card .input-field input {
   color: var(--black-color);
-  direction: rtl;
+  direction: ltr;
   height: 56px;
   border: none;
   outline: none;
@@ -2376,8 +2375,8 @@ main .search-section input[type=radio]::after {
   content: "";
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  right: 50%;
+  transform: translate(50%, -50%);
   border-radius: 50%;
   width: 14px;
   height: 14px;
@@ -2387,8 +2386,8 @@ main .search-section input[type=radio]::before {
   content: "";
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  right: 50%;
+  transform: translate(50%, -50%);
   border-radius: 50%;
   width: 6px;
   height: 6px;
@@ -2470,8 +2469,8 @@ main .search-section .filter-wrap form .departments .deps li .department-header 
 main .search-section .filter-wrap form .departments .deps li .department-header .accordion-button .horizontal {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  right: 50%;
+  transform: translate(50%, -50%);
   width: 12px;
   height: 1px;
   background-color: var(--black-color);
@@ -2483,8 +2482,8 @@ main .search-section .filter-wrap form .departments .deps li .department-header 
   background-color: var(--black-color);
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(90deg);
+  right: 50%;
+  transform: translate(50%, -50%) rotate(90deg);
 }
 main .search-section .filter-wrap form .departments .deps li .department-header .accordion-button.collapsed .vertical {
   height: 12px;
@@ -2492,8 +2491,8 @@ main .search-section .filter-wrap form .departments .deps li .department-header 
   background-color: var(--black-color);
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  right: 50%;
+  transform: translate(50%, -50%);
 }
 main .search-section .filter-wrap form .departments .deps li .accordion-body {
   padding: 16px;
@@ -2557,13 +2556,13 @@ main .search-section .filter-wrap form .seller-level ul li {
     overflow-y: scroll;
     width: 100%;
     background: var(--white-color);
-    left: -100%;
+    right: -100%;
     transition: var(--main-transation);
     height: calc(100vh - 80px);
     padding: 32px 24px;
   }
   main .search-section aside.active {
-    left: 0;
+    right: 0;
   }
 }
 main .contact-section {
@@ -2604,7 +2603,7 @@ main .contact-section .col-12 .shaded-card .input-filed input {
   border-radius: 4px;
   border: solid 1px var(--LightGray);
   transition: 0.3s ease-in-out;
-  direction: rtl;
+  direction: ltr;
   background: none;
 }
 main .contact-section .col-12 .shaded-card .input-filed textarea {
@@ -2652,7 +2651,7 @@ main .about-section .about_wrap .about-text h3 {
 main .about-section .about_wrap .about-text p {
   font-size: 14px;
   margin-bottom: 32px;
-  padding-left: 32px;
+  padding-right: 32px;
   color: var(--text-color);
 }
 main .about-section .about_wrap .about-text ul {
@@ -2737,8 +2736,7 @@ main .about-section .about_wrap .testmonials .swiper .swiper-slide .testmional-c
 }
 main .about-section .about_wrap .testmonials .swiper .swiper-slide .testmional-card img {
   position: absolute;
-  left: 16px;
-  transform: scale(-1);
+  right: 16px;
   top: 16px;
   width: 100px;
   height: 100px;
@@ -2803,8 +2801,8 @@ main .about-section .about_wrap .testmonials .swiper .testimonialsSwiperPaginati
   content: "";
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  right: 50%;
+  transform: translate(50%, -50%);
   width: 4px;
   height: 4px;
   border-radius: 50%;
@@ -2863,8 +2861,8 @@ main .faqs .nav-pills .nav-link {
 }
 main .faqs .nav-pills .nav-link::after {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 50%;
+  transform: translateX(50%);
   bottom: -2px;
   width: 0;
   content: "";
@@ -2898,8 +2896,8 @@ main .faqs .tab-content .accordion-button:not(.collapsed) {
   background: none !important;
 }
 main .faqs .tab-content .accordion-button::after {
-  margin-right: auto !important;
-  margin-left: initial;
+  margin-left: auto !important;
+  margin-right: initial;
 }
 main .faqs .tab-content .accordion-button:focus {
   outline: none !important;
@@ -2908,8 +2906,8 @@ main .faqs .tab-content .accordion-button:focus {
 }
 main .faqs .tab-content .accordion-item {
   border-top: 0 !important;
-  border-right: 0 !important;
   border-left: 0 !important;
+  border-right: 0 !important;
   border-bottom: 1px solid var(--id-confirm) !important;
   border-radius: 0 !important;
   background: none !important;
@@ -2977,11 +2975,11 @@ footer .upper-row h4 {
   }
 }
 footer .upper-row .pa-24 {
-  padding-right: 24px;
+  padding-left: 24px;
 }
 @media (max-width: 992px) {
   footer .upper-row .pa-24 {
-    padding-right: 0;
+    padding-left: 0;
   }
 }
 footer .upper-row .about .logo {
@@ -3097,7 +3095,7 @@ footer .copy-rights {
 }
 footer .copy-rights p {
   color: var(--black-color);
-  direction: rtl;
+  direction: ltr;
   font-weight: 400;
   font-size: 14px;
 }
@@ -3436,7 +3434,7 @@ footer .copy-rights .pay-methods li i {
   color: var(--black-color);
   cursor: pointer;
   margin: 32px 0px 10px 5px;
-  float: right;
+  float: left;
   background: none;
 }
 @media (max-width: 576px) {
@@ -3453,7 +3451,7 @@ footer .copy-rights .pay-methods li i {
   border: 0 none;
   cursor: pointer;
   margin: 32px 0px 10px 5px;
-  float: left;
+  float: right;
 }
 @media (max-width: 576px) {
   #msform .action-button {
@@ -3492,8 +3490,8 @@ footer .copy-rights .pay-methods li i {
 #msform fieldset .advice .icon {
   position: absolute;
   top: -30px;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 50%;
+  transform: translateX(50%);
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -3580,7 +3578,7 @@ footer .copy-rights .pay-methods li i {
   content: "\f107";
   font-family: "Font Awesome 6 pro";
   position: absolute;
-  left: 16px;
+  right: 16px;
   top: 16px;
   color: var(--input-hint);
 }
@@ -3591,7 +3589,7 @@ footer .copy-rights .pay-methods li i {
 #msform fieldset .input-field input,
 #msform fieldset .input-field textarea,
 #msform fieldset .input-field .form-select {
-  direction: rtl;
+  direction: ltr;
   height: 56px;
   border: none;
   outline: none;
@@ -3651,7 +3649,7 @@ footer .copy-rights .pay-methods li i {
 #msform fieldset .input-field .inputs label input {
   z-index: -1;
   position: absolute;
-  left: 0;
+  right: 0;
   top: 0;
   width: 100%;
   -webkit-appearance: none;
@@ -3761,8 +3759,8 @@ input[type=checkbox] {
 }
 input[type=checkbox]::after {
   position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  right: 50%;
+  transform: translate(50%, -50%);
   top: 50%;
   content: "";
   font-family: "FontAwesome";
@@ -3909,7 +3907,7 @@ input[type=checkbox]:checked::after {
   background: none;
   outline: none;
   color: var(--text-color);
-  direction: rtl;
+  direction: ltr;
 }
 .newsletter .form .input-field button {
   border: none;
@@ -3971,7 +3969,7 @@ input[type=checkbox]:checked::after {
   max-height: 200px;
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
 }
 
 .our-partners {
@@ -4053,9 +4051,9 @@ body.dark-theme main .about-section .about_wrap .testmonials .swiper .swiper-sli
 }
 .category-card .inner-card .category-content {
   bottom: 0;
-  left: 0;
-  position: absolute;
   right: 0;
+  position: absolute;
+  left: 0;
   top: 0;
   transition: all 0.4s ease;
   border-radius: 16px;
@@ -4187,7 +4185,7 @@ body.dark-theme main .about-section .about_wrap .testmonials .swiper .swiper-sli
   width: -moz-fit-content;
   width: fit-content;
   position: absolute;
-  right: 0;
+  left: 0;
   top: 0;
   line-height: normal;
 }
@@ -4265,7 +4263,7 @@ body.dark-theme main .about-section .about_wrap .testmonials .swiper .swiper-sli
 .addRequest .input-field input,
 .addRequest .input-field textarea {
   color: var(--black-color);
-  direction: rtl;
+  direction: ltr;
   height: 56px;
   width: 100%;
   border: none;
@@ -4432,7 +4430,7 @@ body.dark-theme main .about-section .about_wrap .testmonials .swiper .swiper-sli
 .requestDetails .addComment .input-field input,
 .requestDetails .addComment .input-field textarea {
   color: var(--black-color);
-  direction: rtl;
+  direction: ltr;
   height: 56px;
   width: 100%;
   border: none;
@@ -4496,4 +4494,7 @@ body.dark-theme main .about-section .about_wrap .testmonials .swiper .swiper-sli
   p {
     font-size: 13px !important;
   }
+}
+.fa-angle-left {
+  transform: scaleX(-1);
 }/*# sourceMappingURL=style.css.map */

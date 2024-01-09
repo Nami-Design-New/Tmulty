@@ -27,8 +27,8 @@
 @mixin centerAbsolute {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  right: 50%;
+  transform: translate(50%, -50%);
 }
 @mixin clearInput {
   border: none;
@@ -85,7 +85,7 @@
 * {
   margin: 0;
   padding: 0;
-  direction: rtl;
+  direction: ltr;
   line-height: 28px;
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -154,7 +154,7 @@ header {
       background: var(--white-color);
       overflow: hidden;
       position: fixed;
-      right: -100%;
+      left: -100%;
       top: 80px;
       transition: var(--main-transation);
       padding: 24px;
@@ -209,7 +209,7 @@ header {
         }
       }
       &.show {
-        right: 0;
+        left: 0;
       }
     }
     .toogler {
@@ -362,7 +362,7 @@ header {
             background: var(--LightGray);
           }
           &.show {
-            left: 0 !important;
+            right: 0 !important;
             top: 80px !important;
             transform: translate(0px, 0px) !important;
             border-radius: 0 !important;
@@ -449,19 +449,19 @@ header {
           }
         }
         .languagemenu.show {
-          left: 232px !important;
+          right: 232px !important;
           @media (max-width: 576px) {
-            left: 40px !important;
+            right: 40px !important;
           }
         }
         .thememenu.show {
-          left: 182px !important;
+          right: 182px !important;
           @media (max-width: 576px) {
-            left: 12px !important;
+            right: 12px !important;
           }
         }
         .notifimenu.show {
-          left: 82px !important;
+          right: 82px !important;
         }
         .searchmenu {
           width: 100vw;
@@ -502,8 +502,8 @@ main {
     .swiperControl {
       .swiper-button-next {
         z-index: 2;
-        left: initial !important;
-        right: 10px !important;
+        right: initial !important;
+        left: 10px !important;
         top: 62%;
         &::after {
           font-family: "Font Awesome 6 Pro";
@@ -518,8 +518,8 @@ main {
       }
       .swiper-button-prev {
         z-index: 2;
-        right: 11px;
-        left: auto;
+        left: 11px;
+        right: auto;
         top: 38%;
         &::after {
           font-family: "Font Awesome 6 Pro";
@@ -539,7 +539,7 @@ main {
         align-items: center;
         gap: 8px;
         width: 27px;
-        right: 10px;
+        left: 10px;
         .swiper-pagination-bullet {
           width: 8px;
           height: 8px;
@@ -551,8 +551,8 @@ main {
       @media (max-width: 576px) {
         position: absolute;
         bottom: 0;
-        transform: translateX(-50%) rotate(0deg);
-        left: 50%;
+        transform: translateX(50%) rotate(0deg);
+        right: 50%;
         z-index: 99;
         width: 100%;
         height: 100px;
@@ -563,19 +563,19 @@ main {
           align-items: center;
           gap: 8px;
           width: 27px;
-          right: 50%;
+          left: 50%;
           transform: rotate(90deg);
           top: 31px;
         }
         .swiper-button-prev {
           z-index: 2;
-          right: 32%;
-          left: auto;
+          left: 32%;
+          right: auto;
           transform: rotate(90deg);
           top: 69%;
         }
         .swiper-button-next {
-          right: 68% !important;
+          left: 68% !important;
           transform: rotate(90deg);
           top: 69%;
         }
@@ -586,7 +586,7 @@ main {
     isolation: isolate;
     .hero_content {
       position: absolute;
-      left: 0;
+      right: 0;
       width: 100%;
       height: 100%;
       @include centerFlex();
@@ -667,7 +667,7 @@ main {
             font-weight: 400;
             font-size: 15px;
             line-height: 28px;
-            margin-right: 10px;
+            margin-left: 10px;
             padding: 5px 24px;
             border-radius: 60px;
           }
@@ -759,7 +759,7 @@ main {
         input,
         textarea {
           color: var(--black-color);
-          direction: rtl;
+          direction: ltr;
           height: 56px;
           width: 100%;
           border: none;
@@ -831,7 +831,7 @@ main {
             border-radius: 50%;
             position: absolute;
             top: 4px;
-            right: 4px;
+            left: 4px;
             content: "";
             background-color: var(--white-color);
           }
@@ -840,8 +840,8 @@ main {
               background-color: var(--main-color);
             }
             &::before {
-              right: initial;
-              left: 4px;
+              left: initial;
+              right: 4px;
             }
           }
         }
@@ -992,8 +992,8 @@ main {
         .user-avatar {
           position: absolute;
           bottom: -60px;
-          left: 50%;
-          transform: translateX(-50%);
+          right: 50%;
+          transform: translateX(50%);
           width: 120px;
           height: 120px;
           border-radius: 50%;
@@ -1008,7 +1008,7 @@ main {
             display: block;
             position: absolute;
             bottom: 0;
-            left: 8px;
+            right: 8px;
             width: 20px;
             border-radius: 50%;
             height: 20px;
@@ -1118,8 +1118,8 @@ main {
           }
           &::after {
             position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
+            right: 50%;
+            transform: translateX(50%);
             bottom: 6px;
             width: 0;
             content: "";
@@ -1244,7 +1244,7 @@ main {
         }
         .swiper-pagination-fraction {
           top: 12px !important;
-          left: 12px !important;
+          right: 12px !important;
           width: 100px !important;
           height: 30px !important;
           direction: ltr !important;
@@ -1285,7 +1285,7 @@ main {
           position: absolute;
           top: -60px;
           padding: 10px;
-          right: 5%;
+          left: 5%;
           border-radius: 120px;
           z-index: 99;
           .owner {
@@ -1399,8 +1399,8 @@ main {
                       padding: 4px 8px;
                       margin: 0;
                       bottom: -42px;
-                      left: 50%;
-                      transform: translateX(-50%);
+                      right: 50%;
+                      transform: translateX(50%);
                       transition: var(--main-transation);
                       opacity: 0;
                       &::after {
@@ -1410,8 +1410,8 @@ main {
                         background: var(--input-bg);
                         content: "";
                         position: absolute;
-                        left: 50%;
-                        transform: translateX(-50%);
+                        right: 50%;
+                        transform: translateX(50%);
                         top: -10px;
                       }
                     }
@@ -1445,7 +1445,7 @@ main {
           }
           @media (max-width: 576px) {
             width: 95%;
-            right: 2.5%;
+            left: 2.5%;
             height: 100px;
             top: -50px;
           }
@@ -1615,13 +1615,13 @@ main {
           overflow-y: scroll;
           width: 100%;
           background: var(--white-color);
-          left: -100%;
+          right: -100%;
           transition: var(--main-transation);
           height: calc(100vh - 80px);
           padding: 32px 24px;
         }
         &.active {
-          left: 0;
+          right: 0;
         }
       }
       .nav-link {
@@ -1753,7 +1753,7 @@ main {
                 background: var(--input-bg);
                 content: "";
                 position: absolute;
-                left: -14px;
+                right: -14px;
                 bottom: 0;
                 clip-path: polygon(0 100%, 100% 100%, 100% 0);
               }
@@ -1764,7 +1764,7 @@ main {
             .message-content {
               background: var(--main-color);
               padding: 10px 16px;
-              border-radius: 12px 12px 0 12px;
+              border-radius: 12px 12px  12px 0;
               color: #fff;
               position: relative;
               &::after {
@@ -1773,7 +1773,7 @@ main {
                 background: var(--main-color);
                 content: "";
                 position: absolute;
-                right: -14px;
+                left: -14px;
                 bottom: 0;
                 clip-path: polygon(0 100%, 100% 100%, 0 0);
               }
@@ -1822,8 +1822,7 @@ main {
             i {
               font-size: 22px;
               color: #fff;
-              margin-right: 4px;
-              transform: scaleX(-1);
+              margin-left: 4px;
             }
           }
         }
@@ -2059,13 +2058,13 @@ main {
           overflow-y: scroll;
           width: 100%;
           background: var(--white-color);
-          left: -100%;
+          right: -100%;
           transition: var(--main-transation);
           height: calc(100vh - 80px);
           padding: 32px 24px;
         }
         &.active {
-          left: 0;
+          right: 0;
         }
       }
       h6 {
@@ -2112,7 +2111,7 @@ main {
           border-radius: 8px;
           z-index: -1;
           position: absolute;
-          left: 0;
+          right: 0;
           top: 0;
           width: 100%;
           appearance: none;
@@ -2145,7 +2144,7 @@ main {
           }
           input {
             color: var(--black-color);
-            direction: rtl;
+            direction: ltr;
             height: 56px;
             border: none;
             outline: none;
@@ -2307,8 +2306,8 @@ main {
                     background-color: var(--black-color);
                     position: absolute;
                     top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%) rotate(90deg);
+                    right: 50%;
+                    transform: translate(50%, -50%) rotate(90deg);
                   }
                   &.collapsed {
                     .vertical {
@@ -2386,13 +2385,13 @@ main {
           overflow-y: scroll;
           width: 100%;
           background: var(--white-color);
-          left: -100%;
+          right: -100%;
           transition: var(--main-transation);
           height: calc(100vh - 80px);
           padding: 32px 24px;
         }
         &.active {
-          left: 0;
+          right: 0;
         }
       }
     }
@@ -2432,7 +2431,7 @@ main {
           border-radius: 4px;
           border: solid 1px var(--LightGray);
           transition: 0.3s ease-in-out;
-          direction: rtl;
+          direction: ltr;
           background: none;
         }
         textarea {
@@ -2486,7 +2485,7 @@ main {
         p {
           font-size: 14px;
           margin-bottom: 32px;
-          padding-left: 32px;
+          padding-right: 32px;
           color: var(--text-color);
         }
         ul {
@@ -2564,8 +2563,7 @@ main {
               position: relative;
               img {
                 position: absolute;
-                left: 16px;
-                transform: scale(-1);
+                right: 16px;
                 top: 16px;
                 width: 100px;
                 height: 100px;
@@ -2686,8 +2684,8 @@ main {
         }
         &::after {
           position: absolute;
-          left: 50%;
-          transform: translateX(-50%);
+          right: 50%;
+          transform: translateX(50%);
           bottom: -2px;
           width: 0;
           content: "";
@@ -2722,8 +2720,8 @@ main {
         background: none !important;
       }
       .accordion-button::after {
-        margin-right: auto !important;
-        margin-left: initial;
+        margin-left: auto !important;
+        margin-right: initial;
       }
       .accordion-button:focus {
         outline: none !important;
@@ -2732,8 +2730,8 @@ main {
       }
       .accordion-item {
         border-top: 0 !important;
-        border-right: 0 !important;
         border-left: 0 !important;
+        border-right: 0 !important;
         border-bottom: 1px solid var(--id-confirm) !important;
         border-radius: 0 !important;
         background: none !important;
@@ -2796,9 +2794,9 @@ footer {
       }
     }
     .pa-24 {
-      padding-right: 24px;
+      padding-left: 24px;
       @media (max-width: 992px) {
-        padding-right: 0;
+        padding-left: 0;
       }
     }
     .about {
@@ -2914,7 +2912,7 @@ footer {
     }
     p {
       color: var(--black-color);
-      direction: rtl;
+      direction: ltr;
       font-weight: 400;
       font-size: 14px;
       a {
@@ -3221,7 +3219,7 @@ footer {
     color: var(--black-color);
     cursor: pointer;
     margin: 32px 0px 10px 5px;
-    float: right;
+    float: left;
     background: none;
     @media (max-width: 576px) {
       margin: 16px 0 0;
@@ -3236,7 +3234,7 @@ footer {
     border: 0 none;
     cursor: pointer;
     margin: 32px 0px 10px 5px;
-    float: left;
+    float: right;
     @media (max-width: 576px) {
       margin: 16px 0 0;
     }
@@ -3271,8 +3269,8 @@ footer {
       .icon {
         position: absolute;
         top: -30px;
-        left: 50%;
-        transform: translateX(-50%);
+        right: 50%;
+        transform: translateX(50%);
         width: 60px;
         height: 60px;
         border-radius: 50%;
@@ -3352,7 +3350,7 @@ footer {
           content: "\f107";
           font-family: "Font Awesome 6 pro";
           position: absolute;
-          left: 16px;
+          right: 16px;
           top: 16px;
           color: var(--input-hint);
         }
@@ -3364,7 +3362,7 @@ footer {
       input,
       textarea,
       .form-select {
-        direction: rtl;
+        direction: ltr;
         height: 56px;
         border: none;
         outline: none;
@@ -3415,7 +3413,7 @@ footer {
           input {
             z-index: -1;
             position: absolute;
-            left: 0;
+            right: 0;
             top: 0;
             width: 100%;
             appearance: none;
@@ -3518,8 +3516,8 @@ input[type="checkbox"] {
   cursor: pointer;
   &::after {
     position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    right: 50%;
+    transform: translate(50%, -50%);
     top: 50%;
     content: "";
     font-family: "FontAwesome";
@@ -3647,7 +3645,7 @@ input[type="checkbox"] {
       input {
         @include clearInput();
         color: var(--text-color);
-        direction: rtl;
+        direction: ltr;
       }
       button {
         @include clearInput();
@@ -3703,7 +3701,7 @@ input[type="checkbox"] {
       max-height: 200px;
       position: absolute;
       top: 0;
-      left: 0;
+      right: 0;
     }
   }
 }
@@ -3783,9 +3781,9 @@ body.dark-theme {
     }
     .category-content {
       bottom: 0;
-      left: 0;
-      position: absolute;
       right: 0;
+      position: absolute;
+      left: 0;
       top: 0;
       transition: all 0.4s ease;
       border-radius: 16px;
@@ -3900,7 +3898,7 @@ body.dark-theme {
         color: var(--white-color);
         width: fit-content;
         position: absolute;
-        right: 0;
+        left: 0;
         top: 0;
         line-height: normal;
         &.new {
@@ -3980,7 +3978,7 @@ body.dark-theme {
     input,
     textarea {
       color: var(--black-color);
-      direction: rtl;
+      direction: ltr;
       height: 56px;
       width: 100%;
       border: none;
@@ -4144,7 +4142,7 @@ body.dark-theme {
       input,
       textarea {
         color: var(--black-color);
-        direction: rtl;
+        direction: ltr;
         height: 56px;
         width: 100%;
         border: none;
@@ -4213,4 +4211,10 @@ body.dark-theme {
   p {
     font-size: 13px !important;
   }
+}
+
+
+
+.fa-angle-left{
+  transform: scaleX(-1);
 }
