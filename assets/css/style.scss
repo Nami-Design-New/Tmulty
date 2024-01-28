@@ -4235,7 +4235,10 @@ body.dark-theme {
 .category-card .inner-card .category-img img {
   filter: brightness(.6);
 }
+.category-card .inner-card .category-content{
+  z-index: 99;
+}
 .category-card .inner-card .category-content .top-area {
-  position: static;
+  position: block;
   padding: 30px;
 }

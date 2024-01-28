@@ -4515,7 +4515,11 @@ body.dark-theme main .about-section .about_wrap .testmonials .swiper .swiper-sli
   filter: brightness(0.6);
 }
 
+.category-card .inner-card .category-content {
+  z-index: 99;
+}
+
 .category-card .inner-card .category-content .top-area {
-  position: static;
+  position: block;
   padding: 30px;
 }/*# sourceMappingURL=styleAR.css.map */
