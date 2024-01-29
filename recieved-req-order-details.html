@@ -204,7 +204,7 @@
                                 </a>
                             </li>
                             <div class="showall">
-                                <a href="chat.html">جميع الإشعارات</a>
+                                <a href="notifications.html">جميع الإشعارات</a>
                             </div>
                         </ul>
                     </li>
@@ -323,7 +323,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-9 order-buttons">
-                                <button class="deliver">
+                                <button class="deliver" data-bs-toggle="modal" data-bs-target="#rateModal">
                                     ارسل طلب تسليم
                                 </button>
                             </div>
@@ -343,6 +343,93 @@
             </div>
         </section>
     </main>
+    <div class="modal fade" id="rateModal" tabindex="-1" aria-labelledby="rateModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="rateModalLabel">تقييم الخدمة</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="rate_field">
+                            <h6>التسليم بالموعد </h6>
+                            <div class="stars">
+                                <div class="sr star-rating-onTimeDelivery">
+                                    <input type="radio" id="star5_onTimeDelivery" name="rating_onTimeDelivery"
+                                        value="5" />
+                                    <label for="star5_onTimeDelivery" title="5 stars"><i
+                                            class="fa-sharp fa-solid fa-star"></i></label>
+                                    <input type="radio" id="star4_onTimeDelivery" name="rating_onTimeDelivery"
+                                        value="4" />
+                                    <label for="star4_onTimeDelivery" title="4 stars"><i
+                                            class="fa-sharp fa-solid fa-star"></i></label>
+                                    <input type="radio" id="star3_onTimeDelivery" name="rating_onTimeDelivery"
+                                        value="3" />
+                                    <label for="star3_onTimeDelivery" title="3 stars"><i
+                                            class="fa-sharp fa-solid fa-star"></i></label>
+                                    <input type="radio" id="star2_onTimeDelivery" name="rating_onTimeDelivery"
+                                        value="2" />
+                                    <label for="star2_onTimeDelivery" title="2 stars"><i
+                                            class="fa-sharp fa-solid fa-star"></i></label>
+                                    <input type="radio" id="star1_onTimeDelivery" name="rating_onTimeDelivery"
+                                        value="1" />
+                                    <label for="star1_onTimeDelivery" title="1 star"><i
+                                            class="fa-sharp fa-solid fa-star"></i></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rate_field">
+                            <h6> التواصل والمتابعه </h6>
+                            <div class="stars">
+                                <div class="sr star-rating-followUp">
+                                    <input type="radio" id="star5_followUp" name="rating_followUp" value="5" />
+                                    <label for="star5_followUp" title="5 stars"><i
+                                            class="fa-sharp fa-solid fa-star"></i></label>
+                                    <input type="radio" id="star4_followUp" name="rating_followUp" value="4" />
+                                    <label for="star4_followUp" title="4 stars"><i
+                                            class="fa-sharp fa-solid fa-star"></i></label>
+                                    <input type="radio" id="star3_followUp" name="rating_followUp" value="3" />
+                                    <label for="star3_followUp" title="3 stars"><i
+                                            class="fa-sharp fa-solid fa-star"></i></label>
+                                    <input type="radio" id="star2_followUp" name="rating_followUp" value="2" />
+                                    <label for="star2_followUp" title="2 stars"><i
+                                            class="fa-sharp fa-solid fa-star"></i></label>
+                                    <input type="radio" id="star1_followUp" name="rating_followUp" value="1" />
+                                    <label for="star1_followUp" title="1 star"><i
+                                            class="fa-sharp fa-solid fa-star"></i></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rate_field">
+                            <h6> جوده الخدمة </h6>
+                            <div class="stars">
+                                <div class="sr star-rating-qos">
+                                    <input type="radio" id="star5_qos" name="rating_qos" value="5" />
+                                    <label for="star5_qos" title="5 stars"><i
+                                            class="fa-sharp fa-solid fa-star"></i></label>
+                                    <input type="radio" id="star4_qos" name="rating_qos" value="4" />
+                                    <label for="star4_qos" title="4 stars"><i
+                                            class="fa-sharp fa-solid fa-star"></i></label>
+                                    <input type="radio" id="star3_qos" name="rating_qos" value="3" />
+                                    <label for="star3_qos" title="3 stars"><i
+                                            class="fa-sharp fa-solid fa-star"></i></label>
+                                    <input type="radio" id="star2_qos" name="rating_qos" value="2" />
+                                    <label for="star2_qos" title="2 stars"><i
+                                            class="fa-sharp fa-solid fa-star"></i></label>
+                                    <input type="radio" id="star1_qos" name="rating_qos" value="1" />
+                                    <label for="star1_qos" title="1 star"><i
+                                            class="fa-sharp fa-solid fa-star"></i></label>
+                                </div>
+                            </div>
+                        </div>
+                        <textarea name="comment" id="comment" placeholder="اكتب تجربتك"></textarea>
+                        <button>ارسال</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <footer>
         <div class="container">
             <div class="row upper-row">
@@ -454,6 +541,25 @@
     </footer>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/app.js"></script>
+    <script>
+        function handleRating(fieldClassName) {
+            const radioInputs = document.querySelectorAll(`.${fieldClassName} input`);
+            const labels = document.querySelectorAll(`.${fieldClassName} label`);
+            radioInputs.forEach((input, index) => {
+                input.addEventListener('click', () => {
+                    labels.forEach((label) => {
+                        label.classList.remove('active');
+                    });
+                    for (let i = 0; i <= index; i++) {
+                        labels[i].classList.add('active');
+                    }
+                });
+            });
+        }
+        handleRating('star-rating-onTimeDelivery');
+        handleRating('star-rating-followUp');
+        handleRating('star-rating-qos');
+    </script>
 </body>
 
 </html>

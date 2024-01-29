@@ -4573,8 +4573,13 @@ main .hero_section .hero_content form {
   }
 }
 
-header .tnavbar .loged-in-minor-menu .link {
+header .tnavbar .loged-in-minor-menu .link .btn {
   position: relative;
+  overflow: initial;
+}
+
+#usermenu {
+  overflow: hidden;
 }
 
 header .tnavbar .right-wrapper .nav-links .nav-link {
@@ -4611,4 +4616,167 @@ header .tnavbar .right-wrapper .nav-links .nav-link {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#rateModal .modal-header {
+  padding: 30px 30px;
+  border-bottom: 0;
+}
+#rateModal .modal-header h5 {
+  color: var(--black-color);
+  font-weight: 600;
+  font-size: 14px;
+}
+#rateModal .modal-header .btn-close {
+  box-shadow: none !important;
+}
+#rateModal .modal-body {
+  padding: 0 30px 30px;
+}
+#rateModal .modal-body form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+}
+#rateModal .modal-body form .sr {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 4px;
+}
+#rateModal .modal-body form .sr label {
+  cursor: pointer;
+  color: #eee;
+}
+#rateModal .modal-body form .sr label.active {
+  color: gold;
+}
+#rateModal .modal-body form .sr input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+#rateModal .modal-body form textarea {
+  width: 100%;
+  background: var(--input-bg);
+  border: none;
+  outline: none;
+  height: 150px;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 8px;
+}
+#rateModal .modal-body form button {
+  width: 100%;
+  height: 48px;
+  border: none;
+  background: none;
+  outline: none;
+  background: var(--main-color);
+  color: var(--white-color);
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+header {
+  z-index: 99;
+}
+
+.rate_field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16px;
+  border-radius: 4px;
+  background: var(--input-bg);
+}
+.rate_field h6 {
+  font-size: 12px;
+  color: var(--black-color);
+}
+
+.modal-content {
+  background-color: var(--white-color);
+}
+
+.notifications_section .notify {
+  padding: 16px;
+  background: var(--input-bg);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.notifications_section .notify .notify_info {
+  gap: 12px;
+  display: flex;
+  align-items: center;
+}
+.notifications_section .notify .notify_info .img {
+  min-width: 60px;
+  height: 60px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.notifications_section .notify .notify_info .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.notifications_section .notify .notify_info .content h6 {
+  font-size: 12px;
+  color: var(--text-color);
+}
+.notifications_section .notify .notify_info .content p {
+  margin-top: 4px;
+  color: var(--black-color);
+  font-size: 12px;
+  line-height: 20px;
+}
+.notifications_section .notify .date_time {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.notifications_section .notify .date_time span {
+  white-space: nowrap;
+  color: var(--text-color);
+  font-size: 12px;
+  line-height: 20px;
+}
+.notifications_section .pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.notifications_section .pagination .prevBtn,
+.notifications_section .pagination .nextBtn {
+  border: none;
+  background: none;
+  outline: none;
+  font-weight: 600;
+  color: var(--black-color);
+  font-size: 12px;
+}
+.notifications_section .pagination .dots {
+  display: flex;
+  gap: 8px;
+}
+.notifications_section .pagination .dots .dot {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  border: none;
+  background: none;
+  outline: none;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  color: var(--white-color);
 }/*# sourceMappingURL=styleAR.css.map */
