@@ -4238,9 +4238,10 @@ body.dark-theme {
   z-index: 99;
 }
 .category-card .inner-card .category-content .top-area {
-  display: block;
+  display: flex;
   padding: 30px;
-  position: static;
+  position: unset;
+  flex-direction: column;
 }
 main .hero_section .hero_content {
   padding: 120px 60px 0 60px;

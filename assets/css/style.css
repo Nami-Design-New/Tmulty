@@ -4522,9 +4522,10 @@ body.dark-theme main .about-section .about_wrap .testmonials .swiper .swiper-sli
 }
 
 .category-card .inner-card .category-content .top-area {
-  display: block;
+  display: flex;
   padding: 30px;
-  position: static;
+  position: unset;
+  flex-direction: column;
 }
 
 main .hero_section .hero_content {
