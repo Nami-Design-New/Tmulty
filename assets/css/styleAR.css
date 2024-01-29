@@ -4516,7 +4516,7 @@ body.dark-theme main .about-section .about_wrap .testmonials .swiper .swiper-sli
 }
 
 .category-card .inner-card .category-content {
-  z-index: 99;
+  z-index: 9;
 }
 
 .category-card .inner-card .category-content .top-area {
@@ -4724,6 +4724,7 @@ header {
 }
 .notifications_section .notify .notify_info .img {
   min-width: 60px;
+  max-width: 60px;
   height: 60px;
   overflow: hidden;
   border-radius: 50%;

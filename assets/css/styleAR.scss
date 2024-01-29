@@ -4233,7 +4233,7 @@ body.dark-theme {
   filter: brightness(.6);
 }
 .category-card .inner-card .category-content {
-  z-index: 99;
+  z-index: 9;
 }
 .category-card .inner-card .category-content .top-area {
   display: flex;
@@ -4406,6 +4406,7 @@ header {
       align-items: center;
       .img {
         min-width: 60px;
+        max-width: 60px;
         height: 60px;
         overflow: hidden;
         border-radius: 50%;
