@@ -4535,3 +4535,18 @@ main .service-details .service-content .content .service-owner-card {
     display: flex;
   }
 }
+.service-card .content {
+  position: relative;
+}
+.editService {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  width: 36px;
+  height: 36px;
+  @include centerFlex();
+  border-radius: 50%;
+  background: var(--main-color);
+  color: var(--white-color);
+  font-size: 16px;
+}
