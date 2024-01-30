@@ -4893,4 +4893,8 @@ main .service-details .service-content .content .service-owner-card {
 .category-card .inner-card .category-content {
   z-index: 2;
   height: 100%;
+}
+
+.category-card .inner-card {
+  display: block;
 }/*# sourceMappingURL=styleAR.css.map */
