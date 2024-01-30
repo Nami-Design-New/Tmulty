@@ -32,6 +32,7 @@
   --input-bg: #fafafa;
   --input-hint: #aaaaaa;
   --id-confirm: #eef6fc;
+  --star: #d9d9d9;
   --main-transation: all 0.5s ease-in-out;
 }
 
@@ -50,6 +51,7 @@
   --LightGray: #171717;
   --id-confirm: #171717;
   --light-bg: #171717;
+  --star: #d9d9d9;
 }
 .dark-theme * {
   color: #bdbdbd;
@@ -4725,7 +4727,8 @@ header {
   align-items: center;
 }
 .notifications_section .notify .notify_info .img {
-  width: 60px;
+  min-width: 60px;
+  max-width: 60px;
   height: 60px;
   overflow: hidden;
   border-radius: 50%;
@@ -4846,6 +4849,7 @@ main .service-details .service-content .content .service-owner-card {
   list-style: none;
 }
 .smallNav ul li {
+  position: relative;
   font-size: 18px;
 }
 .smallNav ul li a {
@@ -4864,8 +4868,28 @@ main .service-details .service-content .content .service-owner-card {
   color: var(--black-color);
   font-weight: 600;
 }
+.smallNav ul li a.active span {
+  color: var(--main-color);
+}
 .smallNav ul li a.active i {
   font-weight: 900;
+  color: var(--main-color);
+}
+.smallNav ul li .num-count2 {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  color: var(--white-color);
+  background: var(--main-color);
+  top: -7px;
+  right: 3px;
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: 400;
+  padding-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @media (max-width: 992px) {
   .smallNav {
@@ -4899,4 +4923,9 @@ main .service-details .service-content .content .service-owner-card {
 
 .category-card .inner-card {
   display: block;
+}
+
+.rate ul li i {
+  font-size: 14px;
+  color: var(--star);
 }/*# sourceMappingURL=style.css.map */
