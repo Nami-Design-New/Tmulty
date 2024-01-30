@@ -4522,11 +4522,19 @@ main .service-details .service-content .content .service-owner-card {
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        i {
+          font-weight: 400;
+        }
         span {
-          font-size: 12px !important;
+          font-size: 10px !important;
           line-height: 20px;
           color: var(--black-color);
           font-weight: 600;
+        }
+        &.active {
+          i {
+            font-weight: 900;
+          }
         }
       }
     }
@@ -4549,4 +4557,8 @@ main .service-details .service-content .content .service-owner-card {
   background: var(--main-color);
   color: var(--white-color);
   font-size: 16px;
+}
+.category-card .inner-card .category-content {
+  z-index: 2;
+  height: 100%;
 }
