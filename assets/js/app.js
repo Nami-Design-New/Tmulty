@@ -148,3 +148,23 @@ $(document).ready(function () {
     (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
   );
 });
+
+var mainSlider = new Swiper(".mainSliderContainer", {
+  spaceBetween: 0,
+  centeredSlides: true,
+  loop: true,
+  // effect: "fade",
+  speed: 500,
+  autoplay: {
+    delay: 8000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".mainsliderPagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".mainSliderNext",
+    prevEl: ".mainsliderPrev",
+  },
+});

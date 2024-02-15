@@ -4594,3 +4594,107 @@ main .service-details .service-content .content .service-owner-card {
   font-size: 14px;
   color: var(--star);
 }
+.mainSection {
+  position: relative;
+  margin-top: 70px;
+  min-height: calc(100vh - 100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .mainSlider {
+    position: relative;
+    .mainSliderContainer {
+      width: 100%;
+      height: 100%;
+      .swiper-slide {
+        .info {
+          padding: 20px 30px;
+          margin-right: 100px;
+          @media (max-width: 768px) {
+            margin-right: 0px;
+            text-align: center;
+            padding: 30px 10px;
+          }
+          .hint {
+            color: var(--text-color);
+            text-transform: capitalize;
+            margin-bottom: 10px;
+            font-size: 20px !important;
+            @media (max-width: 768px) {
+              font-size: 16px !important;
+            }
+          }
+          .sliderTitle {
+            font-size: 50px !important;
+            color: var(--main-color);
+            font-weight: bolder;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            @media (max-width: 768px) {
+              font-size: 30px !important;
+            }
+          }
+          a {
+            margin-top: 20px;
+            display: inline-block;
+          }
+        }
+      }
+      .swiper-button-next,
+      .swiper-button-prev {
+        opacity: 0;
+        background-color: #ffffff30;
+        color: var(--white-color);
+      }
+      .swiper-button-next {
+        left: 40px;
+      }
+      .swiper-button-prev {
+        right: 40px;
+      }
+      &:hover {
+        .swiper-button-next,
+        .swiper-button-prev {
+          opacity: 1;
+        }
+      }
+      .swiper-pagination {
+        left: 20px !important;
+        transform: translateX(0%);
+        .swiper-pagination-bullet {
+          background-color: var(--white-color);
+        }
+        .swiper-pagination-bullet-active {
+          background-color: var(--white-color);
+        }
+      }
+    }
+  }
+  .mainSlideItem.swiper-slide-active {
+    .sliderTitle {
+      animation: slideInRight 1s 0s both;
+    }
+    .hint {
+      animation: fadeInUp 1s 1s both;
+    }
+    a {
+      animation: fadeInUp 1s 1.5s both;
+    }
+  }
+}
+#globe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+  padding: 20px 0;
+  @media (max-width: 576px) {
+    height: 200px;
+  }
+  canvas {
+    width: 100%;
+    height: 100%;
+    min-height: 180px;
+  }
+}
