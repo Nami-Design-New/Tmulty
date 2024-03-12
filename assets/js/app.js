@@ -168,3 +168,21 @@ var mainSlider = new Swiper(".mainSliderContainer", {
     prevEl: ".mainsliderPrev",
   },
 });
+
+
+
+
+
+
+var blogSwiper = new Swiper(".blogSwiper", {
+  spaceBetween: 10,
+  speed: 1000,
+  effect: "fade",
+  autoplay: {
+    delay: 2500,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
